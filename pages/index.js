@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { FiArrowRight, FiPlayCircle, FiCpu, FiDatabase, FiZap, FiBriefcase, FiUsers, FiBarChart2, FiSmile, FiPackage, FiLayers, FiTrendingUp } from 'react-icons/fi';
+import Image from 'next/image';
 import CountUp from 'react-countup';
 
 const fadeInUp = {
@@ -190,12 +191,12 @@ export default function HomePage() {
           >
             {[{
               icon: <FiBarChart2 size={40} className="mx-auto mb-3 text-primary" />,
-              value: 150,
+              value: 4,
               suffix: "+",
               label: "Projects Delivered"
             }, {
               icon: <FiUsers size={40} className="mx-auto mb-3 text-primary" />,
-              value: 50,
+              value: 2,
               suffix: "+",
               label: "Satisfied Clients"
             }, {
@@ -218,9 +219,17 @@ export default function HomePage() {
           <motion.div variants={fadeInUp}>
             <h3 className="text-xl sm:text-2xl font-semibold text-accent-gray-800 mb-8">Powering Innovation For</h3>
             <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 md:gap-x-16">
-              {[...Array(5)].map((_, i) => (
-                <div key={i} className="text-accent-gray-500 text-lg sm:text-xl font-medium filter grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
-                  Client Logo {i + 1}
+              {[
+                { src: '/images/clients/client-one.png', alt: 'Client One Logo' },
+                { src: '/images/clients/client-two.png', alt: 'Client Two Logo' },
+              ].map((logo, i) => (
+                <div key={i} className="relative h-12 w-32 filter grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                  <Image 
+                    src={logo.src} 
+                    alt={logo.alt} 
+                    layout="fill"
+                    objectFit="contain"
+                  />
                 </div>
               ))}
             </div>
