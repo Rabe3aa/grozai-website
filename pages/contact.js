@@ -98,6 +98,17 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-xl font-semibold text-primary">Our Office</h3>
                     <p className="text-accent-gray-600">Venice Tower, Zahraa El Maadi, Cairo, Egypt 4064145</p>
+                  <div className="mt-4 rounded-lg overflow-hidden border border-accent-gray-200">
+                    <iframe 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.322529388433!2d31.28263721511396!3d29.97023198190926!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458381a1e0b7a8d%3A0x4d2a3512b9ded2c!2sVenice%20Tower%202%2C%20Zahraa%20Al%20Maadi%2C%20Al%20Basatin%2C%20Cairo%20Governorate%204211150%2C%20Egypt!5e0!3m2!1sen!2sus!4v1678886474105!5m2!1sen!2sus"
+                      width="100%"
+                      height="300"
+                      style={{ border: 0 }}
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
+                  </div>
                   </div>
                 </div>
                  <div className="flex items-start">

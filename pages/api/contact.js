@@ -12,17 +12,14 @@ export default async function handler(req, res) {
     return res.status(400).json({ message: 'Name, email, and message are required' });
   }
 
-  // Create a test account (you should replace this with real SMTP credentials in production)
-  const testAccount = await nodemailer.createTestAccount();
-
-  // Create a transporter object using the default SMTP transport
+  // Create a transporter object using production SMTP credentials from environment variables
   const transporter = nodemailer.createTransport({
-    host: 'smtp.ethereal.email',
-    port: 587,
-    secure: false, // true for 465, false for other ports
+    host: process.env.SMTP_HOST,
+    port: process.env.SMTP_PORT,
+    secure: process.env.SMTP_PORT == 465, // true for 465, false for other ports
     auth: {
-      user: testAccount.user, // generated ethereal user
-      pass: testAccount.pass, // generated ethereal password
+      user: process.env.SMTP_USER,
+      pass: process.env.SMTP_PASS,
     },
   });
 
