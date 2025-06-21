@@ -98,7 +98,7 @@ export default function IndustriesPage() {
                   <p className="text-lg text-accent-gray-700 mb-6">{industry.description}</p>
                   <div className="bg-accent-gray-50 p-6 rounded-lg border border-accent-gray-200">
                     <h4 className="font-bold text-accent-gray-800">Case Study: {industry.caseStudy.client}</h4>
-                    <p className="text-accent-gray-600 italic mt-2">\"{industry.caseStudy.story}\"</p>
+                    <p className="text-accent-gray-600 italic mt-2">&quot;{industry.caseStudy.story}&quot;</p>
                   </div>
                 </div>
                 <div className={index % 2 === 0 ? 'md:order-2' : 'md:order-1'}>
@@ -122,7 +122,7 @@ export default function IndustriesPage() {
       {/* CTA Section */}
       <motion.section variants={fadeInUp} className="bg-accent-gray-50 py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Let's Build Your Industry's Future</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Let&apos;s Build Your Industry&apos;s Future</h2>
           <p className="text-lg text-accent-gray-700 max-w-2xl mx-auto mb-8">
             Contact us to learn how GrozAI can develop a bespoke AI strategy for your specific sector and business needs.
           </p>

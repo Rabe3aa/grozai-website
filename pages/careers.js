@@ -63,7 +63,7 @@ export default function CareersPage() {
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">Build the Future With Us</h1>
           <p className="text-lg sm:text-xl text-accent-gray-200 max-w-3xl mx-auto">
-            We're looking for brilliant minds to join our mission. If you're passionate about solving complex problems with AI, you've come to the right place.
+            We&apos;re looking for brilliant minds to join our mission. If you&apos;re passionate about solving complex problems with AI, you&apos;ve come to the right place.
           </p>
         </div>
       </motion.section>
@@ -73,7 +73,7 @@ export default function CareersPage() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Why Join GrozAI?</h2>
-            <p className="text-lg text-accent-gray-700">We're more than just a tech company. We're a team dedicated to growth, innovation, and making a difference.</p>
+            <p className="text-lg text-accent-gray-700">We&apos;re more than just a tech company. We&apos;re a team dedicated to growth, innovation, and making a difference.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit) => (
@@ -92,7 +92,7 @@ export default function CareersPage() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Current Openings</h2>
-            <p className="text-lg text-accent-gray-700">Find your next challenge. We're hiring across multiple departments.</p>
+            <p className="text-lg text-accent-gray-700">Find your next challenge. We&apos;re hiring across multiple departments.</p>
           </div>
           <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
             <ul className="divide-y divide-accent-gray-200">
@@ -120,7 +120,7 @@ export default function CareersPage() {
             </ul>
           </div>
            <div className="text-center mt-12">
-                <p className="text-lg text-accent-gray-600">Don't see a role that fits? <Link href="/contact"><a className="text-primary font-semibold hover:underline">Get in touch</a></Link>, we'd still love to hear from you.</p>
+                <p className="text-lg text-accent-gray-600">Don&apos;t see a role that fits? <Link href="/contact"><a className="text-primary font-semibold hover:underline">Get in touch</a></Link>, we&apos;d still love to hear from you.</p>
             </div>
         </div>
       </motion.section>

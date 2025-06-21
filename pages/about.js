@@ -74,7 +74,7 @@ export default function AboutPage() {
             </div>
             <div className="text-center md:text-left border-t-2 md:border-t-0 md:border-l-2 border-primary pt-8 md:pt-0 md:pl-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Our Vision</h2>
-              <p className="text-xl text-accent-gray-700">To be the most trusted partner for applied AI, creating a future where intelligent technology seamlessly integrates with human expertise to solve humanity's biggest challenges.</p>
+              <p className="text-xl text-accent-gray-700">To be the most trusted partner for applied AI, creating a future where intelligent technology seamlessly integrates with human expertise to solve humanity&apos;s biggest challenges.</p>
             </div>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function AboutPage() {
                 Founded in 2021 by a group of data scientists and enterprise software veterans, GrozAI was born from a shared observation: while the promise of AI was immense, its practical application was often out of reach for many businesses. We saw a gap between cutting-edge academic research and scalable, reliable, and user-friendly enterprise solutions.
             </p>
             <p className="text-lg text-accent-gray-700">
-                We set out to change that. Our journey began with a commitment to first principles—understanding our clients' core challenges before writing a single line of code. This client-centric approach, combined with our deep technical expertise, allowed us to build the flexible, powerful platforms we offer today. We are proud to be a bootstrapped, independent company, driven solely by our passion for technology and our clients' success.
+                We aren&apos;t just a tool change that. Our journey began with a commitment to first principles—understanding our clients&apos; core challenges before writing a single line of code. This client-centric approach, combined with our deep technical expertise, allowed us to build the flexible, powerful platforms we offer today. We are proud to be a bootstrapped, independent company, driven solely by our passion for technology and our clients&apos; businesses.
             </p>
         </div>
       </motion.section>
@@ -154,7 +154,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Success Partners</h2>
-            <p className="text-lg text-accent-gray-700">Our trusted partners who contribute to GrozAI's success and vision.</p>
+            <p className="text-lg text-accent-gray-700">Our trusted partners who contribute to GrozAI&apos;s success and vision.</p>
           </div>
           <div className="flex flex-col items-center">
             <motion.div variants={fadeInUp} className="text-center max-w-md">
@@ -182,7 +182,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
           <p className="text-lg text-accent-gray-200 max-w-2xl mx-auto mb-8">
-            Let's explore how GrozAI's platforms can unlock new opportunities for your organization. Contact our team for a personalized consultation and demo.
+            Let&apos;s explore how GrozAI&apos;s platforms can unlock new opportunities for your organization. Contact our team for a personalized consultation and demo.
           </p>
           <Link href="/contact" legacyBehavior>
             <a className="inline-block bg-white text-primary font-semibold px-8 py-4 rounded-lg text-lg hover:bg-accent-gray-100 transition-colors duration-300">

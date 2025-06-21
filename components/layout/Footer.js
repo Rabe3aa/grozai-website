@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa'; // Example icons
 
 export default function Footer() {
@@ -10,10 +11,12 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-center md:text-left">
           <div className="md:col-span-2">
             <div className="flex items-center justify-center md:justify-start mb-4 h-10">
-              <img 
+              <Image 
                 src="/images/groz-ai-logo-gray-png.png" 
                 alt="GrozAI Logo" 
-                className="h-full w-auto object-contain"
+                width={150} 
+                height={40} 
+                objectFit="contain"
               />
             </div>
             <p className="text-sm mb-4 max-w-sm">

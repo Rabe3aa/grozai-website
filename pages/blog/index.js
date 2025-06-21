@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FiArrowRight } from 'react-icons/fi';
 import { posts } from '../../data/posts';
 
@@ -41,10 +42,11 @@ const BlogPage = ({ featuredPost, recentPosts }) => {
           <div className="container mx-auto px-4 sm:px-6">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                   <motion.div variants={fadeInUp} className="relative aspect-w-16 aspect-h-9 rounded-lg overflow-hidden bg-gray-200">
-                      <img 
+                      <Image 
                         src={featuredPost.image} 
                         alt={featuredPost.alt} 
-                        className="w-full h-full object-cover"
+                        layout="fill"
+                        objectFit="cover"
                         onError={(e) => {
                           e.target.src = '/images/placeholder-blog.jpg';
                           e.target.alt = 'Default blog post image';
@@ -78,10 +80,11 @@ const BlogPage = ({ featuredPost, recentPosts }) => {
             {recentPosts.map((post) => (
               <motion.div key={post.slug} variants={fadeInUp} className="bg-white rounded-lg shadow-md overflow-hidden flex flex-col h-full">
                 <div className="relative w-full h-48 bg-gray-200">
-                    <img 
+                    <Image 
                       src={post.image} 
                       alt={post.alt}
-                      className="w-full h-full object-cover"
+                      layout="fill"
+                      objectFit="cover"
                       onError={(e) => {
                         e.target.src = '/images/placeholder-blog.jpg';
                         e.target.alt = 'Default blog post image';

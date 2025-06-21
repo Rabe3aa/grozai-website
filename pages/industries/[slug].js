@@ -13,7 +13,7 @@ export default function IndustryDetailPage() {
       <div className="min-h-screen flex flex-col items-center justify-center text-center">
         <Head><title>Industry Not Found | GrozAI</title></Head>
         <h1 className="text-3xl font-bold mb-4 text-primary">Industry Not Found</h1>
-        <p className="mb-6">Sorry, we couldn't find details for this industry.</p>
+        <p className="mb-6">Sorry, we couldn&apos;t find details for this industry.</p>
         <Link href="/" legacyBehavior>
           <a className="text-blue-600 hover:underline">Back to Home</a>
         </Link>

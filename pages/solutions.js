@@ -68,7 +68,7 @@ export default function SolutionsPage() {
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">From Challenge to Opportunity</h1>
           <p className="text-lg sm:text-xl text-accent-gray-200 max-w-3xl mx-auto">
-            We don't just build technology. We craft targeted solutions that solve your most pressing business problems and unlock new avenues for growth.
+            We don&apos;t just build technology. We craft targeted solutions that solve your most pressing business problems and unlock new avenues for growth.
           </p>
         </div>
       </motion.section>

@@ -195,7 +195,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">Have a Specific Challenge?</h2>
           <p className="text-lg text-accent-gray-200 max-w-2xl mx-auto mb-8">
-            Our team is ready to discuss your project. Let's build a custom AI strategy to help you achieve your goals.
+            Our team is ready to discuss your project. Let&apos;s build a custom AI strategy to help you achieve your goals.
           </p>
           <Link href="/contact" legacyBehavior>
             <a className="inline-block bg-white text-primary font-semibold px-8 py-4 rounded-lg text-lg hover:bg-accent-gray-100 transition-colors duration-300">

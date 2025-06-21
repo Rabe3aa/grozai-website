@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
@@ -77,10 +78,13 @@ export default function Header() {
       <div className="container mx-auto px-6 py-2 md:py-3 flex justify-between items-center">
         <Link href="/" legacyBehavior>
           <a className="flex items-center h-12">
-            <img 
-              src="/images/groz-ai-logo-white-png.png" 
-              alt="GrozAI Logo" 
-              className="h-8 md:h-10 w-auto object-contain transition-all duration-300"
+            <Image
+              src="/images/groz-ai-logo-white-png.png"
+              alt="GrozAI Logo"
+              width={150}
+              height={40}
+              objectFit="contain"
+              className="transition-all duration-300"
             />
           </a>
         </Link>

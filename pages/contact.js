@@ -68,7 +68,7 @@ export default function ContactPage() {
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }} variants={stagger}>
       <Head>
-        <title>Contact GrozAI - Let's Talk AI</title>
+        <title>Contact GrozAI - Let&apos;s Talk AI</title>
         <meta name="description" content="Get in touch with the GrozAI team. Reach out for sales inquiries, partnership opportunities, or to request a personalized demo." />
       </Head>
 
@@ -77,7 +77,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">Get in Touch</h1>
           <p className="text-lg sm:text-xl text-accent-gray-200 max-w-3xl mx-auto">
-            Have a question, a project idea, or just want to learn more? We're here to help you navigate the future of AI.
+            Have a question, a project idea, or just want to learn more? We&apos;re here to help you navigate the future of AI.
           </p>
         </div>
       </motion.section>
