@@ -136,6 +136,34 @@ export default function HomePage() {
         </div>
       </motion.section>
 
+      {/* Industries We Serve Section */}
+      <motion.section variants={fadeInUp} className="py-16 md:py-24 bg-accent-gray-50">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Industries We Serve</h2>
+            <p className="text-lg text-accent-gray-700">At Groz AI, we bring cutting-edge AI solutions to life across multiple industries—tailored, scalable, and built for real-world impact.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {require('../data/industries').default.map((industry) => (
+  <Link
+    key={industry.slug}
+    href={`/industries/${industry.slug}`}
+    legacyBehavior
+  >
+    <a className="border-2 border-primary rounded-xl transition-all duration-300 group bg-white hover:bg-primary hover:text-white cursor-pointer shadow p-6 flex flex-col" style={{ textDecoration: 'none' }}>
+      <h3 className="text-xl font-bold text-primary mb-4 transition-colors duration-300 group-hover:text-white">{industry.title}</h3>
+      <ul className="list-disc list-inside text-accent-gray-700 mb-2 transition-colors duration-300 group-hover:text-white">
+        {industry.details.solutions.map((sol, idx) => (
+          <li key={idx}>{sol}</li>
+        ))}
+      </ul>
+    </a>
+  </Link>
+))}
+          </div>
+        </div>
+      </motion.section>
+
       {/* Key Stats & Clients Section */}
       <motion.section 
         variants={fadeInUp}

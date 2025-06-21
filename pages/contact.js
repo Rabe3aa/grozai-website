@@ -30,12 +30,39 @@ export default function ContactPage() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState({ success: null, message: '' });
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission logic (e.g., send to an API endpoint)
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you shortly.');
-    setFormData({ name: '', email: '', company: '', inquiry: 'General Question', message: '' });
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      
+      if (response.ok) {
+        setSubmitStatus({ success: true, message: 'Thank you for your message! We will get back to you shortly.' });
+        setFormData({ name: '', email: '', company: '', inquiry: 'General Question', message: '' });
+      } else {
+        throw new Error(data.message || 'Something went wrong');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setSubmitStatus({ 
+        success: false, 
+        message: error.message || 'Failed to send message. Please try again later.' 
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -134,10 +161,34 @@ export default function ContactPage() {
                   <label htmlFor="message" className="block text-sm font-medium text-accent-gray-700 mb-1">Message</label>
                   <textarea id="message" name="message" rows="5" value={formData.message} onChange={handleChange} required className="w-full px-4 py-2 border border-accent-gray-300 rounded-md focus:ring-primary focus:border-primary"></textarea>
                 </div>
-                <div id="request-demo">
-                  <button type="submit" className="w-full bg-primary text-white font-semibold px-6 py-3 rounded-lg text-lg hover:bg-blue-700 transition-colors duration-300 flex items-center justify-center">
-                    Send Message <FiSend className="ml-2" />
+                <div id="request-demo" className="space-y-4">
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className={`w-full bg-primary text-white font-semibold px-6 py-3 rounded-lg text-lg transition-colors duration-300 flex items-center justify-center ${
+                      isSubmitting ? 'opacity-75 cursor-not-allowed' : 'hover:bg-blue-700'
+                    }`}
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <svg className="animate-spin -ml-1 mr-2 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send Message <FiSend className="ml-2" />
+                      </>
+                    )}
                   </button>
+                  
+                  {submitStatus.message && (
+                    <div className={`p-4 rounded-md ${submitStatus.success ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'}`}>
+                      <p className="text-sm">{submitStatus.message}</p>
+                    </div>
+                  )}
                 </div>
               </form>
             </motion.div>

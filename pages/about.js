@@ -19,23 +19,25 @@ const stagger = {
 
 const leadership = [
   {
-    name: 'Dr. Evelyn Reed',
-    title: 'Founder & Chief AI Scientist',
-    bio: 'With a Ph.D. in Machine Learning and two decades at the forefront of AI research, Dr. Reed founded GrozAI to translate theoretical breakthroughs into tangible enterprise value.',
+    name: 'Abdelrahman Ali',
+    title: 'Founder & Lead Applied Scientist',
+    bio: 'With a background in applied AI and Data Sceince and real-world retail experience, Abdelrahman founded Groz AI to turn machine learning into actionable business solutions. He leads the development of GenAI and analytics tools that help companies make smarter, faster decisions.',
     image: '/images/leader-1.jpg', // Placeholder image
   },
   {
-    name: 'Marcus Thorne',
+    name: 'Mohamed Fahmy | Al mohasebon Al Arab',
     title: 'Chief Executive Officer',
-    bio: 'A seasoned executive with a track record of scaling tech companies, Marcus leads our strategic vision, ensuring our innovations align with market needs and drive customer success.',
-    image: '/images/leader-2.jpg', // Placeholder image
-  },
-  {
-    name: 'Jian Li',
-    title: 'VP of Engineering',
-    bio: 'Jian is the architect of our robust, scalable AI platforms. She leads a world-class engineering team dedicated to building reliable and performant solutions.',
+    bio: 'With deep expertise in financial strategy and operational scaling, Mohamed Fahmy serves as CEO at Groz AI, ensuring sustainable growth and smart capital deployment. With a sharp eye on both performance and potential, he aligns financial planning with the company’s long-term vision for AI-driven transformation.',
     image: '/images/leader-3.jpg', // Placeholder image
   },
+  {
+    name: 'Ali El Shareef',
+    title: 'Chief Saudi Partner',
+    bio: 'With a strong track record in leading high-impact ventures across Saudi Arabia, Al Shareef joined Groz AI to bridge cutting-edge technology with real business opportunity. Backed by deep market insight and a wide network of strategic connections, he drives growth and partnerships that scale innovation across the region.',
+    image: '/images/leader-2.jpg', // Placeholder image
+  },
+  
+  
 ];
 
 const values = [
@@ -100,10 +102,19 @@ export default function AboutPage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {values.map((value) => (
-              <motion.div key={value.title} variants={fadeInUp} className="p-6">
-                <div className="inline-block p-4 bg-primary text-white rounded-full mb-4">{value.icon}</div>
-                <h3 className="text-xl font-bold text-primary mb-2">{value.title}</h3>
-                <p className="text-accent-gray-600">{value.description}</p>
+              <motion.div
+                key={value.title}
+                variants={fadeInUp}
+                className="p-6 border-2 border-primary rounded-xl transition-all duration-300 group bg-white hover:bg-primary hover:text-white cursor-pointer"
+              >
+                <div className="inline-block p-4 rounded-full mb-4 border-2 border-primary transition-all duration-300 group-hover:bg-white group-hover:border-white">
+                  {React.cloneElement(value.icon, {
+                    className: 'text-primary group-hover:text-primary',
+                    style: { stroke: '#00127a', color: 'inherit' },
+                  })}
+                </div>
+                <h3 className="text-xl font-bold text-primary mb-2 transition-colors duration-300 group-hover:text-white">{value.title}</h3>
+                <p className="text-accent-gray-600 transition-colors duration-300 group-hover:text-white">{value.description}</p>
               </motion.div>
             ))}
           </div>
@@ -134,6 +145,34 @@ export default function AboutPage() {
                 <p className="text-sm text-accent-gray-600 max-w-xs mx-auto">{leader.bio}</p>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Success Partners Section */}
+      <motion.section variants={fadeInUp} className="py-12 md:py-20 bg-white">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Success Partners</h2>
+            <p className="text-lg text-accent-gray-700">Our trusted partners who contribute to GrozAI's success and vision.</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <motion.div variants={fadeInUp} className="text-center max-w-md">
+              <div className="relative w-36 h-36 mx-auto mb-4">
+                <Image
+                  src="/images/partner-adel-fawzy.jpg"
+                  alt="Adel Fawzy"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-full"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-primary">Adel Fawzy</h3>
+              <p className="text-primary font-semibold mb-2">Financial Consultant</p>
+              <p className="text-sm text-accent-gray-600 max-w-xs mx-auto">
+                Adel Fawzy brings decades of financial expertise to GrozAI, providing strategic consulting and guidance on fiscal planning, investment, and sustainable growth. His insights and experience ensure GrozAI’s financial operations are robust and future-ready.
+              </p>
+            </motion.div>
           </div>
         </div>
       </motion.section>
