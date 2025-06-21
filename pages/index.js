@@ -151,10 +151,13 @@ export default function HomePage() {
     legacyBehavior
   >
     <a className="border-2 border-primary rounded-xl transition-all duration-300 group bg-white hover:bg-primary hover:text-white cursor-pointer shadow p-6 flex flex-col" style={{ textDecoration: 'none' }}>
+      <div className="text-4xl text-primary mb-4 transition-colors duration-300 group-hover:text-white">
+        <industry.icon />
+      </div>
       <h3 className="text-xl font-bold text-primary mb-4 transition-colors duration-300 group-hover:text-white">{industry.title}</h3>
       <ul className="list-disc list-inside text-accent-gray-700 mb-2 transition-colors duration-300 group-hover:text-white">
         {industry.details.solutions.map((sol, idx) => (
-          <li key={idx}>{sol}</li>
+          <li key={idx}>{sol.title}</li>
         ))}
       </ul>
     </a>
