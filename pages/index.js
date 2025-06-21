@@ -223,7 +223,7 @@ export default function HomePage() {
                 { src: '/images/clients/client-one.png', alt: 'Client One Logo' },
                 { src: '/images/clients/client-two.png', alt: 'Client Two Logo' },
               ].map((logo, i) => (
-                <div key={i} className="relative h-12 w-32 filter grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <div key={i} className="relative h-16 w-40 filter grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
                   <Image 
                     src={logo.src} 
                     alt={logo.alt} 
