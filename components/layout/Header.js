@@ -4,15 +4,7 @@ import { useRouter } from 'next/router';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
-
-const navLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
-  { name: 'Services', path: '/services' },
-  { name: 'Solutions', path: '/solutions' },
-  { name: 'Blog', path: '/blog' },
-  { name: 'Contact', path: '/contact' },
-];
+import { useTranslation } from 'next-i18next';
 
 const mobileMenuVariants = {
   hidden: { opacity: 0, x: '100%' },
@@ -24,8 +16,27 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const router = useRouter();
+  const { t, i18n } = useTranslation('common');
 
-  const isSolid = scrolled || isMobileMenuOpen || router.pathname === '/terms-of-service';
+  const navLinks = [
+    { key: 'home', path: '/', label: t('nav_home') },
+    { key: 'about', path: '/about', label: t('nav_about') },
+    { key: 'services', path: '/services', label: t('nav_services') },
+    { key: 'solutions', path: '/solutions', label: t('nav_solutions') },
+    { key: 'blog', path: '/blog', label: t('nav_blog') },
+    { key: 'contact', path: '/contact', label: t('nav_contact') },
+  ];
+
+  const handleLanguageChange = () => {
+    const newLocale = i18n.language === 'en' ? 'ar' : 'en';
+    router.push({ pathname: router.pathname, query: router.query }, router.asPath, { locale: newLocale });
+  };
+
+  const isSolid = scrolled || isMobileMenuOpen || 
+    router.pathname === '/terms-of-service' || 
+    (router.pathname !== '/' && 
+     router.pathname !== '/blog' && 
+     router.pathname.startsWith('/blog'));
 
   // Effect for handling scroll
   useEffect(() => {
@@ -90,25 +101,31 @@ export default function Header() {
         </Link>
         
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6 items-center">
+                <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
-            <Link key={link.name} href={link.path} legacyBehavior>
-              <a className={`text-sm font-medium transition-colors ${navLinkTextColor} hover:text-accent-gray-200`}>
-                {link.name}
+            <Link key={link.key} href={link.path} legacyBehavior>
+                            <a className={`text-sm transition-colors ${navLinkTextColor} hover:text-accent-gray-200 ${i18n.language === 'ar' ? 'font-bold' : 'font-medium'}`}>
+                {t(`nav_${link.key}`)}
               </a>
             </Link>
           ))}
           <Link href="/contact#request-demo" legacyBehavior>
             <a className="bg-white text-primary px-4 py-2 rounded-md text-sm font-medium hover:bg-accent-gray-100 transition-colors">
-              Request a Demo
+              {t('request_a_demo')}
             </a>
           </Link>
+          <button 
+            onClick={handleLanguageChange} 
+            className={`ml-4 text-sm font-medium transition-colors ${navLinkTextColor} hover:text-accent-gray-200`}
+          >
+            {i18n.language === 'en' ? 'العربية' : 'English'}
+          </button>
         </nav>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
           <button onClick={toggleMobileMenu} className={`focus:outline-none ${mobileIconColor} z-50 relative`}>
-            {isMobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />}
+            {isMobileMenuOpen ? <FiX size={28} /> : <FiMenu size={28} />} 
           </button>
         </div>
       </div>
@@ -124,12 +141,12 @@ export default function Header() {
             className="md:hidden fixed inset-0 top-[72px] bg-primary p-6 pt-10 space-y-6 z-40 flex flex-col items-center"
           >
             {navLinks.map((link) => (
-              <Link key={`mobile-${link.name}`} href={link.path} legacyBehavior>
+              <Link key={`mobile-${link.key}`} href={link.path} legacyBehavior>
                 <a 
                   onClick={() => setIsMobileMenuOpen(false)} 
-                  className="text-2xl font-medium text-white hover:text-accent-gray-200 transition-colors w-full text-center py-2"
+                  className={`text-2xl text-white hover:text-accent-gray-200 transition-colors w-full text-center py-2 ${i18n.language === 'ar' ? 'font-bold' : 'font-medium'}`}
                 >
-                  {link.name}
+                  {link.label}
                 </a>
               </Link>
             ))}
@@ -138,9 +155,18 @@ export default function Header() {
                 onClick={() => setIsMobileMenuOpen(false)} 
                 className="bg-white text-primary px-8 py-3 rounded-md text-xl font-medium hover:bg-accent-gray-100 transition-colors w-full text-center mt-6"
               >
-                Request a Demo
+                {t('request_a_demo')}
               </a>
             </Link>
+            <button
+              onClick={() => {
+                handleLanguageChange();
+                setIsMobileMenuOpen(false);
+              }}
+              className="text-2xl font-medium text-white hover:text-accent-gray-200 transition-colors w-full text-center py-2 mt-4"
+            >
+              {i18n.language === 'en' ? 'العربية' : 'English'}
+            </button>
           </motion.div>
         )}
       </AnimatePresence>

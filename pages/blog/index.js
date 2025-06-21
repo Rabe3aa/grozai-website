@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { FiArrowRight } from 'react-icons/fi';
 import { posts } from '../../data/posts';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -44,9 +45,11 @@ const BlogPage = ({ featuredPost, recentPosts }) => {
                   <motion.div variants={fadeInUp} className="relative aspect-w-16 aspect-h-9 rounded-lg overflow-hidden bg-gray-200">
                       <Image 
                         src={featuredPost.image} 
-                        alt={featuredPost.alt} 
-                        layout="fill"
-                        objectFit="cover"
+                        alt={featuredPost.alt || 'Featured blog post image'}
+                        width={800}
+                        height={450}
+                        className="w-full h-full object-cover"
+                        priority
                         onError={(e) => {
                           e.target.src = '/images/placeholder-blog.jpg';
                           e.target.alt = 'Default blog post image';
@@ -111,13 +114,27 @@ const BlogPage = ({ featuredPost, recentPosts }) => {
   );
 };
 
-export async function getStaticProps() {
-  const sortedPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date));
-  const featuredPost = sortedPosts[0] || null;
-  const recentPosts = sortedPosts.slice(1);
+export async function getStaticProps({ locale }) {
+  // First, sort all posts by date
+  const sortedPosts = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
+  
+  // Find the 'Personalization at Scale' post
+  const featuredArticle = sortedPosts.find(post => 
+    post.title === 'Personalization at Scale: How AI is Redefining Customer Experience'
+  );
+  
+  // Get all other posts except the featured one
+  const otherPosts = sortedPosts.filter(post => 
+    post.title !== 'Personalization at Scale: How AI is Redefining Customer Experience'
+  );
+  
+  // If the featured article exists, use it; otherwise use the most recent post
+  const featuredPost = featuredArticle || sortedPosts[0] || null;
+  const recentPosts = featuredArticle ? otherPosts : sortedPosts.slice(1);
 
   return {
     props: {
+      ...(await serverSideTranslations(locale, ['common'])),
       featuredPost,
       recentPosts,
     },

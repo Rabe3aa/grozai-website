@@ -1,0 +1,229 @@
+{
+  "site_title": "GrozAI - AI and Data Science for Enterprise",
+  "hero_title": "Intelligent Solutions, <1>Real-World Impact.</1>",
+  "hero_subtitle": "GrozAI empowers enterprises with cutting-edge AI and Data Science to solve complex challenges and drive transformative growth.",
+  "explore_solutions": "Explore Our Solutions",
+  "request_demo": "Request a Demo",
+  "section1_title": "Transforming Businesses with Intelligent AI",
+  "section1_subtitle": "GrozAI specializes in developing bespoke Artificial Intelligence and Data Science solutions that empower enterprises to unlock new efficiencies, gain deeper insights from their data, and create innovative products and services. We bridge the gap between complex AI capabilities and real-world business value.",
+  "section1_feature1_title": "Custom AI Models",
+  "section1_feature1_desc": "Tailored machine learning models for predictive analytics, NLP, computer vision, and more to solve your unique challenges.",
+  "section1_feature2_title": "Data Strategy & Engineering",
+  "section1_feature2_desc": "Building robust data pipelines and infrastructure to support scalable AI applications and data-driven decisions.",
+  "section1_feature3_title": "AI-Powered Automation",
+  "section1_feature3_desc": "Streamlining complex business processes and enhancing decision-making capabilities with intelligent automation solutions.",
+  "section1_feature4_title": "Strategic AI Consulting",
+  "section1_feature4_desc": "Guiding your business through its AI adoption journey, from ideation and strategy to implementation and scaling.",
+  "industries_title": "Industries We Serve",
+  "industries_subtitle": "At Groz AI, we bring cutting-edge AI solutions to life across multiple industries—tailored, scalable, and built for real-world impact.",
+  "stats_title": "Driven by Data, Trusted by Leaders",
+  "stats_subtitle": "Our commitment to excellence and innovation has earned us the trust of forward-thinking enterprises. We deliver measurable results and foster long-term partnerships.",
+  "stats_stat1_label": "Completed Projects",
+  "stats_stat2_label": "Client Satisfaction",
+  "stats_stat3_label": "Data Points Analyzed",
+  "stats_stat4_label": "Support Availability",
+  "powering_innovation_title": "Trusted by Industry Leaders",
+  "client_one_alt": "Client One Logo",
+  "client_two_alt": "Client Two Logo",
+  "platforms_title": "Explore Our AI-Powered Platforms",
+  "platforms_subtitle": "Leverage our suite of intelligent platforms designed to tackle your most pressing business needs and unlock new opportunities for growth.",
+  "platform1_title": "InsightAI Platform",
+  "platform1_desc": "An advanced analytics platform that uncovers deep insights from your data, enabling smarter, faster decision-making.",
+  "platform2_title": "AutomatePro Suite",
+  "platform2_desc": "Intelligently automate repetitive tasks and complex workflows, freeing up your team to focus on strategic initiatives.",
+  "platform3_title": "PredictiveEdge Engine",
+  "platform3_desc": "Forecast future trends, customer behavior, and operational outcomes with our cutting-edge predictive modeling engine.",
+  "learn_more": "Learn More",
+  "final_cta_title": "Ready to Transform Your Business?",
+  "final_cta_subtitle": "Let GrozAI be your partner in navigating the complexities of the digital age with intelligent, data-driven solutions.",
+  "get_started_today": "Get Started Today",
+  "industries": {
+    "retail-ecommerce": {
+      "title": "Retail & E-Commerce",
+      "shortDescription": "Personalized recommendations, demand forecasting, and AI-powered loyalty.",
+      "details": {
+        "overview": "AI is revolutionizing retail and e-commerce by enabling hyper-personalized shopping experiences, optimizing inventory, and predicting trends before they happen. We help businesses leverage data to create smarter, more efficient operations.",
+        "solutions": [
+          {
+            "title": "Personalized Recommendations",
+            "description": "Using customer behavior and purchase history to deliver product suggestions that convert."
+          },
+          {
+            "title": "Demand Forecasting",
+            "description": "AI-driven models to optimize stock levels, reduce waste, and ensure product availability."
+          },
+          {
+            "title": "Shelf Monitoring",
+            "description": "Computer vision for real-time inventory management and planogram compliance."
+          },
+          {
+            "title": "Churn Prediction",
+            "description": "Advanced models to identify at-risk customers and increase retention and loyalty."
+          }
+        ],
+        "howWePerform": "GrozAI delivers end-to-end AI solutions for retailers, from data integration and model development to seamless platform deployment. We partner with you to identify high-ROI use cases, implement robust AI pipelines, and train your teams for ongoing success."
+      }
+    },
+    "healthcare-diagnostics": {
+      "title": "Healthcare & Diagnostics",
+      "shortDescription": "Medical document digitization, OCR, and AI-driven diagnostics.",
+      "details": {
+        "overview": "AI in healthcare streamlines diagnostics, automates paperwork, and enhances patient care with deep learning and NLP. Our solutions are built to be secure, compliant, and impactful.",
+        "solutions": [
+          {
+            "title": "Medical Document OCR",
+            "description": "Digitize and extract critical information from medical documents using advanced OCR."
+          },
+          {
+            "title": "AI-Powered Diagnostics",
+            "description": "Enhance diagnostic imaging and reporting for faster, more accurate clinical results."
+          },
+          {
+            "title": "Insurance Fraud Detection",
+            "description": "Anomaly detection models to identify and flag fraudulent insurance claims."
+          },
+          {
+            "title": "Real-Time Patient Analysis",
+            "description": "Continuous patient data analysis for proactive care and early intervention."
+          }
+        ],
+        "howWePerform": "GrozAI works with healthcare providers to automate workflows, improve diagnostic accuracy, and ensure compliance with data privacy standards. We tailor AI solutions to your unique needs, integrating seamlessly with existing systems."
+      }
+    },
+    "education-edtech": {
+      "title": "Education & EdTech",
+      "shortDescription": "AI tutors, exam generation, and curriculum-aligned feedback.",
+      "details": {
+        "overview": "AI transforms education with personalized learning paths, automated administrative tasks, and interactive feedback systems that engage students like never before.",
+        "solutions": [
+          {
+            "title": "AI-Powered Tutors",
+            "description": "Personalized student support with AI tutors trained on specific curricula."
+          },
+          {
+            "title": "Automated Assessments",
+            "description": "Generate and grade exams automatically to save educators valuable time."
+          },
+          {
+            "title": "Interactive Learning Platforms",
+            "description": "Engage students with platforms that provide real-time, adaptive feedback."
+          },
+          {
+            "title": "Curriculum Analytics",
+            "description": "Actionable insights for teachers and administrators from curriculum-aligned data."
+          }
+        ],
+        "howWePerform": "GrozAI partners with schools and edtech companies to build adaptive learning platforms and assessment tools, leveraging AI to enhance outcomes for students and educators alike."
+      }
+    },
+    "finance-banking": {
+      "title": "Finance & Banking",
+      "shortDescription": "AI-driven fraud detection, algorithmic trading, and personalized financial advice.",
+      "details": {
+        "overview": "In finance, AI enhances security, automates trading, and provides personalized services, driving efficiency and mitigating risk across the board.",
+        "solutions": [
+          {
+            "title": "Real-Time Fraud Detection",
+            "description": "Protect assets with machine learning models that identify and prevent fraud in real-time."
+          },
+          {
+            "title": "Algorithmic Trading",
+            "description": "Utilize sophisticated models for market analysis and high-speed automated trade execution."
+          },
+          {
+            "title": "AI-Powered Credit Scoring",
+            "description": "Achieve more accurate risk assessment with dynamic, AI-driven credit scoring."
+          },
+          {
+            "title": "Robo-Advisory Services",
+            "description": "Deliver personalized, automated financial advice to a broad range of clients."
+          }
+        ],
+        "howWePerform": "GrozAI provides secure, compliant AI solutions for financial institutions, focusing on fraud prevention, trading optimization, and customer service automation to deliver a competitive edge."
+      }
+    },
+    "manufacturing-logistics": {
+      "title": "Manufacturing & Logistics",
+      "shortDescription": "Predictive maintenance, supply chain optimization, and quality control automation.",
+      "details": {
+        "overview": "AI optimizes the entire manufacturing and logistics pipeline, from predictive maintenance on the factory floor to route optimization in the supply chain.",
+        "solutions": [
+          {
+            "title": "Predictive Maintenance",
+            "description": "Reduce machinery downtime and lower maintenance costs with AI-powered predictions."
+          },
+          {
+            "title": "Automated Quality Control",
+            "description": "Leverage computer vision to detect product defects with superhuman accuracy."
+          },
+          {
+            "title": "Supply Chain Optimization",
+            "description": "Enhance inventory and logistics management for a more efficient supply chain."
+          },
+          {
+            "title": "Robotics Process Automation",
+            "description": "Automate repetitive manufacturing and warehousing tasks with intelligent RPA."
+          }
+        ],
+        "howWePerform": "GrozAI helps manufacturing and logistics companies integrate AI to improve operational efficiency, reduce costs, and enhance product quality. Our solutions are designed for scalability and seamless integration with existing industrial systems."
+      }
+    }
+  },
+  "back_to_home": "Back to Home",
+  "key_ai_solutions": "Key AI Solutions",
+  "how_grozai_delivers": "How GrozAI Delivers",
+  "nav_home": "Home",
+  "nav_about": "About",
+  "nav_services": "Services",
+  "nav_solutions": "Solutions",
+  "nav_blog": "Blog",
+  "nav_contact": "Contact",
+  "request_a_demo": "Request a Demo",
+  "footer_description": "GrozAI provides cutting-edge AI platforms to transform your business operations, from intelligent automation to advanced data analytics.",
+  "footer_navigate": "Navigate",
+  "footer_contact": "Contact Us",
+  "footer_email": "Email",
+  "footer_phone": "Phone",
+  "footer_rights": "All rights reserved.",
+  "footer_terms": "Terms of Service",
+  "footer_nav_about": "About Us",
+  "footer_nav_services": "Services",
+  "footer_nav_solutions": "Solutions",
+  "footer_nav_blog": "Blog",
+  "footer_nav_contact": "Contact",
+  "about_page_title": "About GrozAI - Our Mission, Story, and Team",
+  "about_page_description": "Learn about GrozAI's mission to democratize AI, our story of innovation, and the leadership team driving our success.",
+  "about_hero_title": "The People Behind the Platforms",
+  "about_hero_subtitle": "We are a team of researchers, engineers, and strategists united by a single mission: to make artificial intelligence a powerful force for good in the enterprise.",
+  "about_mission_title": "Our Mission",
+  "about_mission_text": "To democratize access to cutting-edge AI, enabling businesses of all sizes to harness the power of data and intelligent automation. We believe in building solutions that are not only technologically advanced but also practical, scalable, and ethically sound.",
+  "about_story_title": "Our Story",
+  "about_story_text": "Founded by a team of applied scientist and enterprise experts, GrozAI was born from a shared passion for solving real-world problems. We saw a gap between the potential of AI and its practical application in business. Since our inception, we've been dedicated to bridging that gap, delivering custom solutions that drive measurable results and foster sustainable growth for our clients.",
+  "about_values_title": "Our Core Values",
+  "about_values_subtitle": "The principles that guide our work and culture.",
+  "about_value1_title": "Innovation at Core",
+  "about_value1_desc": "We are driven by a relentless curiosity to explore new ideas and push the boundaries of what AI can achieve.",
+  "about_value2_title": "Customer Partnership",
+  "about_value2_desc": "We succeed when our clients succeed. We build lasting relationships based on trust, transparency, and shared goals.",
+  "about_value3_title": "Uncompromising Integrity",
+  "about_value3_desc": "We are committed to the highest ethical standards in our work, from data privacy to algorithmic fairness.",
+  "about_leadership_title": "Meet Our Leadership",
+  "about_leadership_subtitle": "The experienced team guiding our mission and strategy.",
+  "about_leader1_name": "Abdelrahman Ali",
+    "about_leader1_title": "Lead Applied Scientist",
+  "about_leader1_bio": "With a background in applied AI and Data Sceince and real-world retail experience, Abdelrahman founded Groz AI to turn machine learning into actionable business solutions. He leads the development of GenAI and analytics tools that help companies make smarter, faster decisions.",
+  "about_leader2_name": "Mohamed Fahmy | Al mohasebon Al Arab",
+  "about_leader2_title": "Chief Executive Officer",
+  "about_leader2_bio": "With deep expertise in financial strategy and operational scaling, Mohamed Fahmy serves as CEO at Groz AI, ensuring sustainable growth and smart capital deployment. With a sharp eye on both performance and potential, he aligns financial planning with the company’s long-term vision for AI-driven transformation.",
+  "about_leader3_name": "Ali El Shareef",
+  "about_leader3_title": "Chief Saudi Partner",
+  "about_leader3_bio": "With a strong track record in leading high-impact ventures across Saudi Arabia, Al Shareef joined Groz AI to bridge cutting-edge technology with real business opportunity. Backed by deep market insight and a wide network of strategic connections, he drives growth and partnerships that scale innovation across the region.",
+  "about_partners_title": "Success Partners",
+  "about_partners_subtitle": "Our trusted partners who contribute to GrozAI's success and vision.",
+  "about_partner1_name": "Adel Fawzy",
+  "about_partner1_title": "Financial Consultant",
+  "about_partner1_bio": "Adel Fawzy brings decades of financial expertise to GrozAI, providing strategic consulting and guidance on fiscal planning, investment, and sustainable growth. His insights and experience ensure GrozAI’s financial operations are robust and future-ready.",
+  "about_cta_title": "Ready to Transform Your Business?",
+  "about_cta_subtitle": "Let's explore how GrozAI's platforms can unlock new opportunities for your organization. Contact our team for a personalized consultation and demo.",
+  "about_cta_button": "Get in Touch"
+}

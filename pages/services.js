@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { FiArrowRight, FiBarChart2, FiMessageSquare, FiEye, FiCpu, FiDatabase, FiBriefcase, FiCode, FiLayers, FiShield, FiCloud, FiCpu as FiChip, FiZap } from 'react-icons/fi';
 import Link from 'next/link';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -207,4 +208,12 @@ export default function ServicesPage() {
 
     </motion.div>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
 }

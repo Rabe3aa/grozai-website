@@ -1,8 +1,9 @@
 import '@/styles/globals.css'
 import Layout from '@/components/layout/Layout'
 import { AnimatePresence } from 'framer-motion'; // For page transitions
+import { appWithTranslation } from 'next-i18next';
 
-export default function App({ Component, pageProps, router }) {
+function App({ Component, pageProps, router }) {
   return (
     <Layout>
       <AnimatePresence mode="wait" initial={false}>
@@ -11,3 +12,5 @@ export default function App({ Component, pageProps, router }) {
     </Layout>
   )
 }
+
+export default appWithTranslation(App);

@@ -3,19 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3014",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "framer-motion": "^11.2.10",
+    "i18next": "^25.2.1",
     "next": "^14.2.29",
+    "next-i18next": "^15.4.2",
     "nodemailer": "^7.0.3",
     "react": "^18",
     "react-countup": "^6.5.3",
     "react-dom": "^18",
-    "react-icons": "^5.5.0"
+    "react-i18next": "^15.5.3",
+    "react-icons": "^5.5.0",
+    "tailwindcss-rtl": "^0.9.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.19",

@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { posts } from '../../data/posts';
 import { FiCalendar, FiUser } from 'react-icons/fi';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -57,11 +58,12 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params, locale }) {
   const post = posts.find(p => p.slug === params.slug);
 
   return {
     props: {
+      ...(await serverSideTranslations(locale, ['common'])),
       post,
     },
   };

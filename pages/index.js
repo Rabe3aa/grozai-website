@@ -1,9 +1,12 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { FiArrowRight, FiPlayCircle, FiCpu, FiDatabase, FiZap, FiBriefcase, FiUsers, FiBarChart2, FiSmile, FiPackage, FiLayers, FiTrendingUp } from 'react-icons/fi';
+import { FiArrowLeft, FiArrowRight, FiPlayCircle, FiCpu, FiDatabase, FiZap, FiBriefcase, FiUsers, FiBarChart2, FiSmile, FiPackage, FiLayers, FiTrendingUp } from 'react-icons/fi';
 import Image from 'next/image';
 import CountUp from 'react-countup';
+import { useTranslation, Trans } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useRouter } from 'next/router';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -19,10 +22,12 @@ const stagger = {
 };
 
 export default function HomePage() {
+  const { t } = useTranslation('common');
+  const { locale } = useRouter();
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }} variants={stagger}>
       <Head>
-        <title>GrozAI - AI and Data Science for Enterprise</title>
+        <title>{t('site_title')}</title>
         
       </Head>
 
@@ -38,26 +43,33 @@ export default function HomePage() {
             variants={fadeInUp}
             className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight"
           >
-            Intelligent Solutions, <br />Real-World Impact.
+            <Trans i18nKey="hero_title">
+              Intelligent Solutions, <span className="text-cyan-300">Real-World Impact.</span>
+            </Trans>
           </motion.h1>
           <motion.p 
             variants={fadeInUp}
             className="text-lg sm:text-xl md:text-2xl text-accent-gray-200 mb-12 max-w-3xl mx-auto"
           >
-            GrozAI empowers enterprises with cutting-edge AI and Data Science to solve complex challenges and drive transformative growth.
+            {t('hero_subtitle')}
           </motion.p>
           <motion.div 
             variants={fadeInUp} 
-            className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6"
+            className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 max-w-xl mx-auto"
           >
             <Link href="/solutions" legacyBehavior>
-              <a className="bg-white text-primary font-semibold px-6 sm:px-8 py-3 rounded-lg text-base sm:text-lg hover:bg-accent-gray-100 transition-colors duration-300 flex items-center group">
-                Explore Our Solutions <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                                          <a className="bg-white text-primary font-semibold px-6 py-3 rounded-lg text-base sm:text-lg hover:bg-accent-gray-100 transition-colors duration-300 flex items-center justify-center group w-full whitespace-nowrap">
+                {t('explore_solutions')}
+                {locale === 'ar' ? (
+                  <FiArrowLeft className="ms-2 group-hover:-translate-x-1 transition-transform" />
+                ) : (
+                  <FiArrowRight className="ms-2 group-hover:translate-x-1 transition-transform" />
+                )}
               </a>
             </Link>
             <Link href="/contact#request-demo" legacyBehavior>
-              <a className="border-2 border-white text-white font-semibold px-6 sm:px-8 py-3 rounded-lg text-base sm:text-lg hover:bg-white hover:text-primary transition-colors duration-300 flex items-center group">
-                Request a Demo <FiPlayCircle className="ml-2 group-hover:scale-110 transition-transform" />
+                                          <a className="border-2 border-white text-white font-semibold px-6 py-3 rounded-lg text-base sm:text-lg hover:bg-white hover:text-primary transition-colors duration-300 flex items-center justify-center group w-full whitespace-nowrap">
+                {t('request_demo')} <FiPlayCircle className="ms-2 group-hover:scale-110 transition-transform" />
               </a>
             </Link>
           </motion.div>
@@ -91,13 +103,13 @@ export default function HomePage() {
       >
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">
-            Transforming Businesses with Intelligent AI
+            {t('section1_title')}
           </h2>
           <motion.p 
             variants={fadeInUp}
-            className="text-base sm:text-lg md:text-xl text-accent-gray-700 max-w-3xl mx-auto mb-12 sm:mb-16"
+            className="text-base sm:text-lg md:text-xl text-accent-gray-700 max-w-3xl mx-auto mb-12 md:mb-16"
           >
-            GrozAI specializes in developing bespoke Artificial Intelligence and Data Science solutions that empower enterprises to unlock new efficiencies, gain deeper insights from their data, and create innovative products and services. We bridge the gap between complex AI capabilities and real-world business value.
+            {t('section1_subtitle')}
           </motion.p>
 
           <motion.div 
@@ -106,20 +118,20 @@ export default function HomePage() {
           >
             {[{
               icon: <FiCpu size={36} />,
-              title: "Custom AI Models",
-              description: "Tailored machine learning models for predictive analytics, NLP, computer vision, and more to solve your unique challenges."
+              title: t('section1_feature1_title'),
+              description: t('section1_feature1_desc')
             }, {
               icon: <FiDatabase size={36} />,
-              title: "Data Strategy & Engineering",
-              description: "Building robust data pipelines and infrastructure to support scalable AI applications and data-driven decisions."
+              title: t('section1_feature2_title'),
+              description: t('section1_feature2_desc')
             }, {
               icon: <FiZap size={36} />,
-              title: "AI-Powered Automation",
-              description: "Streamlining complex business processes and enhancing decision-making capabilities with intelligent automation solutions."
+              title: t('section1_feature3_title'),
+              description: t('section1_feature3_desc')
             }, {
               icon: <FiBriefcase size={36} />,
-              title: "Strategic AI Consulting",
-              description: "Guiding your business through its AI adoption journey, from ideation and strategy to implementation and scaling."
+              title: t('section1_feature4_title'),
+              description: t('section1_feature4_desc')
             }].map((item, index) => (
               <motion.div 
                 variants={fadeInUp} 
@@ -141,29 +153,25 @@ export default function HomePage() {
       <motion.section variants={fadeInUp} className="py-16 md:py-24 bg-accent-gray-50">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Industries We Serve</h2>
-            <p className="text-lg text-accent-gray-700">At Groz AI, we bring cutting-edge AI solutions to life across multiple industries—tailored, scalable, and built for real-world impact.</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">{t('industries_title')}</h2>
+            <p className="text-lg text-accent-gray-700">{t('industries_subtitle')}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {require('../data/industries').default.map((industry) => (
-  <Link
-    key={industry.slug}
-    href={`/industries/${industry.slug}`}
-    legacyBehavior
-  >
-    <a className="border-2 border-primary rounded-xl transition-all duration-300 group bg-white hover:bg-primary hover:text-white cursor-pointer shadow p-6 flex flex-col" style={{ textDecoration: 'none' }}>
-      <div className="text-4xl text-primary mb-4 transition-colors duration-300 group-hover:text-white">
-        <industry.icon />
-      </div>
-      <h3 className="text-xl font-bold text-primary mb-4 transition-colors duration-300 group-hover:text-white">{industry.title}</h3>
-      <ul className="list-disc list-inside text-accent-gray-700 mb-2 transition-colors duration-300 group-hover:text-white">
-        {industry.details.solutions.map((sol, idx) => (
-          <li key={idx}>{sol.title}</li>
-        ))}
-      </ul>
-    </a>
-  </Link>
-))}
+            {Object.entries(t('industries', { returnObjects: true })).map(([slug, industry]) => (
+              <Link
+                key={slug}
+                href={`/industries/${slug}`}
+                legacyBehavior
+              >
+                <a className="border-2 border-primary rounded-xl transition-all duration-300 group bg-white hover:bg-primary hover:text-white cursor-pointer shadow p-6 flex flex-col" style={{ textDecoration: 'none' }}>
+                  <h3 className="text-xl font-bold text-primary mb-4 transition-colors duration-300 group-hover:text-white">{industry.title}</h3>
+                  <p className="text-accent-gray-700 mb-4 flex-grow transition-colors duration-300 group-hover:text-white">{industry.shortDescription}</p>
+                  <span className="text-primary font-semibold mt-auto self-start group-hover:text-white transition-colors duration-300 flex items-center">
+                    {t('learn_more')} <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </a>
+              </Link>
+            ))}
           </div>
         </div>
       </motion.section>
@@ -175,13 +183,13 @@ export default function HomePage() {
       >
         <div className="container mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">
-            Driven by Data, Trusted by Leaders
+            {t('stats_title')}
           </h2>
           <motion.p 
-            variants={fadeInUp} 
+            variants={fadeInUp}
             className="text-base sm:text-lg md:text-xl text-accent-gray-700 max-w-3xl mx-auto mb-12 sm:mb-16"
           >
-            Our commitment to excellence and innovation has earned us the trust of forward-thinking enterprises. We deliver measurable results and foster long-term partnerships.
+            {t('stats_subtitle')}
           </motion.p>
 
           {/* Animated Stats */}
@@ -193,17 +201,17 @@ export default function HomePage() {
               icon: <FiBarChart2 size={40} className="mx-auto mb-3 text-primary" />,
               value: 4,
               suffix: "+",
-              label: "Projects Delivered"
+              label: t('stats_stat1_label'),
             }, {
               icon: <FiUsers size={40} className="mx-auto mb-3 text-primary" />,
               value: 2,
               suffix: "+",
-              label: "Satisfied Clients"
+              label: t('stats_stat2_label'),
             }, {
               icon: <FiSmile size={40} className="mx-auto mb-3 text-primary" />,
               value: 98,
               suffix: "%",
-              label: "Client Retention"
+              label: t('stats_stat3_label'),
             }].map((stat, index) => (
               <motion.div variants={fadeInUp} key={index} className="p-6 bg-white border-2 border-primary rounded-lg shadow-md">
                 {stat.icon}
@@ -217,11 +225,11 @@ export default function HomePage() {
 
           {/* Client Logos Placeholder */}
           <motion.div variants={fadeInUp}>
-            <h3 className="text-xl sm:text-2xl font-semibold text-accent-gray-800 mb-8">Powering Innovation For</h3>
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-12">{t('powering_innovation_title')}</h2>
             <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 md:gap-x-16">
               {[
-                { src: '/images/clients/client-one.png', alt: 'Client One Logo' },
-                { src: '/images/clients/client-two.png', alt: 'Client Two Logo' },
+                { src: '/images/clients/client-one.png', alt: t('client_one_alt') },
+                { src: '/images/clients/client-two.png', alt: t('client_two_alt') },
               ].map((logo, i) => (
                 <div key={i} className="relative h-28 w-64 filter grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
                   <Image 
@@ -244,12 +252,12 @@ export default function HomePage() {
       >
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Explore Our AI-Powered Platforms</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">{t('platforms_title')}</h2>
             <motion.p 
               variants={fadeInUp}
               className="text-base sm:text-lg md:text-xl text-accent-gray-700 max-w-2xl mx-auto"
             >
-              Leverage our suite of intelligent platforms designed to tackle your most pressing business needs and unlock new opportunities for growth.
+              {t('platforms_subtitle')}
             </motion.p>
           </div>
 
@@ -259,18 +267,18 @@ export default function HomePage() {
           >
             {[{
               Icon: FiPackage,
-              title: "InsightAI Platform",
-              description: "An advanced analytics platform that uncovers deep insights from your data, enabling smarter, faster decision-making.",
+              title: t('platform1_title'),
+              description: t('platform1_desc'),
               link: "/products#insightai"
             }, {
               Icon: FiLayers,
-              title: "AutomatePro Suite",
-              description: "Intelligently automate repetitive tasks and complex workflows, freeing up your team to focus on strategic initiatives.",
+              title: t('platform2_title'),
+              description: t('platform2_desc'),
               link: "/products#automatepro"
             }, {
               Icon: FiTrendingUp,
-              title: "PredictiveEdge Engine",
-              description: "Forecast future trends, customer behavior, and operational outcomes with our cutting-edge predictive modeling engine.",
+              title: t('platform3_title'),
+              description: t('platform3_desc'),
               link: "/products#predictiveedge"
             }].map((product, index) => (
               <motion.div 
@@ -283,7 +291,7 @@ export default function HomePage() {
                 <p className="text-accent-gray-600 mb-6 flex-grow group-hover:text-gray-200 transition-colors duration-300">{product.description}</p>
                 <Link href={product.link} legacyBehavior>
                   <a className="inline-block mt-auto bg-primary text-white font-medium py-3 px-6 rounded-lg transition-colors duration-300 self-start group-hover:bg-white group-hover:text-primary">
-                    Learn More <FiArrowRight className="inline ml-2" />
+                    {t('learn_more')} <FiArrowRight className="inline ml-2" />
                   </a>
                 </Link>
               </motion.div>
@@ -295,14 +303,14 @@ export default function HomePage() {
       {/* Final CTA Section */}
       <section className="py-16 md:py-24 bg-primary text-white" style={{ clipPath: 'polygon(0 0, 50% 5vw, 100% 0, 100% calc(100% - 5vw), 50% 100%, 0 calc(100% - 5vw))' }}>
         <div className="container mx-auto px-4 sm:px-6 text-center">
-          <motion.h2 variants={fadeInUp} className="text-3xl sm:text-4xl font-bold mb-4">Ready to Transform Your Business?</motion.h2>
+          <motion.h2 variants={fadeInUp} className="text-3xl sm:text-4xl font-bold mb-4">{t('final_cta_title')}</motion.h2>
           <motion.p variants={fadeInUp} className="text-base sm:text-lg md:text-xl text-accent-gray-200 mb-10 max-w-xl mx-auto">
-            Let GrozAI be your partner in navigating the complexities of the digital age with intelligent, data-driven solutions.
+            {t('final_cta_subtitle')}
           </motion.p>
           <motion.div variants={fadeInUp}>
             <Link href="/contact#request-demo" legacyBehavior>
               <a className="bg-white text-primary font-semibold px-10 py-4 rounded-lg text-xl hover:bg-accent-gray-100 transition-colors duration-300">
-                Get Started Today
+                {t('get_started_today')}
               </a>
             </Link>
           </motion.div>
@@ -311,4 +319,12 @@ export default function HomePage() {
 
     </motion.div>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common', 'footer'])),
+    },
+  };
 }

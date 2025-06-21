@@ -11,7 +11,7 @@ export const posts = [
     slug: 'ai-driven-customer-experience',
     title: 'Personalization at Scale: How AI is Redefining Customer Experience',
     date: generateRandomDate(twoMonthsAgo, today).toISOString(),
-    image: '/images/blog/ai-customer-experience.jpg',
+    image: '/images/blog/ai-customer-experience.jpg', // Make sure this image exists in public/images/blog/
     alt: 'AI analyzing customer data for personalization',
     summary: 'Move beyond basic segmentation. AI allows for true one-to-one personalization, creating unique customer journeys that boost loyalty and drive revenue. Learn how it works.',
     content: `

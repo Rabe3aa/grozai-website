@@ -6,162 +6,162 @@ import { MdScreenSearchDesktop, MdInventory, MdRule, MdSchool, MdAssessment } fr
 const industries = [
   {
     slug: "retail-ecommerce",
-    title: "Retail & E-Commerce",
+    title: "industries.retail-ecommerce.title",
     icon: FaShoppingCart,
-    shortDescription: "Personalized recommendations, demand forecasting, and AI-powered loyalty.",
+    shortDescription: "industries.retail-ecommerce.shortDescription",
     details: {
-      overview: "AI is revolutionizing retail and e-commerce by enabling hyper-personalized shopping experiences, optimizing inventory, and predicting trends before they happen. We help businesses leverage data to create smarter, more efficient operations.",
+      overview: "industries.retail-ecommerce.details.overview",
       solutions: [
-        { 
-          title: "Personalized Recommendations",
-          description: "Using customer behavior and purchase history to deliver product suggestions that convert.",
+        {
+          title: "industries.retail-ecommerce.details.solutions.0.title",
+          description: "industries.retail-ecommerce.details.solutions.0.description",
           icon: FaBrain
         },
-        { 
-          title: "Demand Forecasting",
-          description: "AI-driven models to optimize stock levels, reduce waste, and ensure product availability.",
+        {
+          title: "industries.retail-ecommerce.details.solutions.1.title",
+          description: "industries.retail-ecommerce.details.solutions.1.description",
           icon: FaChartLine
         },
-        { 
-          title: "Shelf Monitoring",
-          description: "Computer vision for real-time inventory management and planogram compliance.",
+        {
+          title: "industries.retail-ecommerce.details.solutions.2.title",
+          description: "industries.retail-ecommerce.details.solutions.2.description",
           icon: MdInventory
         },
-        { 
-          title: "Churn Prediction",
-          description: "Advanced models to identify at-risk customers and increase retention and loyalty.",
+        {
+          title: "industries.retail-ecommerce.details.solutions.3.title",
+          description: "industries.retail-ecommerce.details.solutions.3.description",
           icon: FaUserGraduate
         }
       ],
-      howWePerform: "GrozAI delivers end-to-end AI solutions for retailers, from data integration and model development to seamless platform deployment. We partner with you to identify high-ROI use cases, implement robust AI pipelines, and train your teams for ongoing success."
+      howWePerform: "industries.retail-ecommerce.details.howWePerform"
     }
   },
   {
     slug: "healthcare-diagnostics",
-    title: "Healthcare & Diagnostics",
+    title: "industries.healthcare-diagnostics.title",
     icon: FaHeartbeat,
-    shortDescription: "Medical document digitization, OCR, and AI-driven diagnostics.",
+    shortDescription: "industries.healthcare-diagnostics.shortDescription",
     details: {
-      overview: "AI in healthcare streamlines diagnostics, automates paperwork, and enhances patient care with deep learning and NLP. Our solutions are built to be secure, compliant, and impactful.",
+      overview: "industries.healthcare-diagnostics.details.overview",
       solutions: [
-        { 
-          title: "Medical Document OCR",
-          description: "Digitize and extract critical information from medical documents using advanced OCR.",
+        {
+          title: "industries.healthcare-diagnostics.details.solutions.0.title",
+          description: "industries.healthcare-diagnostics.details.solutions.0.description",
           icon: FaFileInvoiceDollar
         },
-        { 
-          title: "AI-Powered Diagnostics",
-          description: "Enhance diagnostic imaging and reporting for faster, more accurate clinical results.",
+        {
+          title: "industries.healthcare-diagnostics.details.solutions.1.title",
+          description: "industries.healthcare-diagnostics.details.solutions.1.description",
           icon: MdScreenSearchDesktop
         },
-        { 
-          title: "Insurance Fraud Detection",
-          description: "Anomaly detection models to identify and flag fraudulent insurance claims.",
+        {
+          title: "industries.healthcare-diagnostics.details.solutions.2.title",
+          description: "industries.healthcare-diagnostics.details.solutions.2.description",
           icon: FaSearchDollar
         },
-        { 
-          title: "Real-Time Patient Analysis",
-          description: "Continuous patient data analysis for proactive care and early intervention.",
+        {
+          title: "industries.healthcare-diagnostics.details.solutions.3.title",
+          description: "industries.healthcare-diagnostics.details.solutions.3.description",
           icon: FaChartLine
         }
       ],
-      howWePerform: "GrozAI works with healthcare providers to automate workflows, improve diagnostic accuracy, and ensure compliance with data privacy standards. We tailor AI solutions to your unique needs, integrating seamlessly with existing systems."
+      howWePerform: "industries.healthcare-diagnostics.details.howWePerform"
     }
   },
   {
     slug: "education-edtech",
-    title: "Education & EdTech",
+    title: "industries.education-edtech.title",
     icon: FaUserGraduate,
-    shortDescription: "AI tutors, exam generation, and curriculum-aligned feedback.",
+    shortDescription: "industries.education-edtech.shortDescription",
     details: {
-      overview: "AI transforms education with personalized learning paths, automated administrative tasks, and interactive feedback systems that engage students like never before.",
+      overview: "industries.education-edtech.details.overview",
       solutions: [
-        { 
-          title: "AI-Powered Tutors",
-          description: "Personalized student support with AI tutors trained on specific curricula.",
+        {
+          title: "industries.education-edtech.details.solutions.0.title",
+          description: "industries.education-edtech.details.solutions.0.description",
           icon: FaRobot
         },
-        { 
-          title: "Automated Assessments",
-          description: "Generate and grade exams automatically to save educators valuable time.",
+        {
+          title: "industries.education-edtech.details.solutions.1.title",
+          description: "industries.education-edtech.details.solutions.1.description",
           icon: MdAssessment
         },
-        { 
-          title: "Interactive Learning Platforms",
-          description: "Engage students with platforms that provide real-time, adaptive feedback.",
+        {
+          title: "industries.education-edtech.details.solutions.2.title",
+          description: "industries.education-edtech.details.solutions.2.description",
           icon: FaBook
         },
-        { 
-          title: "Curriculum Analytics",
-          description: "Actionable insights for teachers and administrators from curriculum-aligned data.",
+        {
+          title: "industries.education-edtech.details.solutions.3.title",
+          description: "industries.education-edtech.details.solutions.3.description",
           icon: MdSchool
         }
       ],
-      howWePerform: "GrozAI partners with schools and edtech companies to build adaptive learning platforms and assessment tools, leveraging AI to enhance outcomes for students and educators alike."
+      howWePerform: "industries.education-edtech.details.howWePerform"
     }
   },
   {
     slug: "finance-banking",
-    title: "Finance & Banking",
+    title: "industries.finance-banking.title",
     icon: FaLandmark,
-    shortDescription: "AI-driven fraud detection, algorithmic trading, and personalized financial advice.",
+    shortDescription: "industries.finance-banking.shortDescription",
     details: {
-      overview: "In finance, AI enhances security, automates trading, and provides personalized services, driving efficiency and mitigating risk across the board.",
+      overview: "industries.finance-banking.details.overview",
       solutions: [
-        { 
-          title: "Real-Time Fraud Detection",
-          description: "Protect assets with machine learning models that identify and prevent fraud in real-time.",
+        {
+          title: "industries.finance-banking.details.solutions.0.title",
+          description: "industries.finance-banking.details.solutions.0.description",
           icon: FaShieldAlt
         },
-        { 
-          title: "Algorithmic Trading",
-          description: "Utilize sophisticated models for market analysis and high-speed automated trade execution.",
+        {
+          title: "industries.finance-banking.details.solutions.1.title",
+          description: "industries.finance-banking.details.solutions.1.description",
           icon: FaChartLine
         },
-        { 
-          title: "AI-Powered Credit Scoring",
-          description: "Achieve more accurate risk assessment with dynamic, AI-driven credit scoring.",
+        {
+          title: "industries.finance-banking.details.solutions.2.title",
+          description: "industries.finance-banking.details.solutions.2.description",
           icon: MdRule
         },
-        { 
-          title: "Robo-Advisory Services",
-          description: "Deliver personalized, automated financial advice to a broad range of clients.",
+        {
+          title: "industries.finance-banking.details.solutions.3.title",
+          description: "industries.finance-banking.details.solutions.3.description",
           icon: FaRobot
         }
       ],
-      howWePerform: "GrozAI provides secure, compliant AI solutions for financial institutions, focusing on fraud prevention, trading optimization, and customer service automation to deliver a competitive edge."
+      howWePerform: "industries.finance-banking.details.howWePerform"
     }
   },
   {
     slug: "manufacturing-logistics",
-    title: "Manufacturing & Logistics",
+    title: "industries.manufacturing-logistics.title",
     icon: FaIndustry,
-    shortDescription: "Predictive maintenance, supply chain optimization, and quality control automation.",
+    shortDescription: "industries.manufacturing-logistics.shortDescription",
     details: {
-      overview: "AI optimizes the entire manufacturing and logistics pipeline, from predictive maintenance on the factory floor to route optimization in the supply chain.",
+      overview: "industries.manufacturing-logistics.details.overview",
       solutions: [
-        { 
-          title: "Predictive Maintenance",
-          description: "Reduce machinery downtime and lower maintenance costs with AI-powered predictions.",
+        {
+          title: "industries.manufacturing-logistics.details.solutions.0.title",
+          description: "industries.manufacturing-logistics.details.solutions.0.description",
           icon: FaCogs
         },
-        { 
-          title: "Automated Quality Control",
-          description: "Leverage computer vision to detect product defects with superhuman accuracy.",
+        {
+          title: "industries.manufacturing-logistics.details.solutions.1.title",
+          description: "industries.manufacturing-logistics.details.solutions.1.description",
           icon: FaFlask
         },
-        { 
-          title: "Supply Chain Optimization",
-          description: "Enhance inventory and logistics management for a more efficient supply chain.",
+        {
+          title: "industries.manufacturing-logistics.details.solutions.2.title",
+          description: "industries.manufacturing-logistics.details.solutions.2.description",
           icon: FaTruck
         },
-        { 
-          title: "Robotics Process Automation",
-          description: "Automate repetitive manufacturing and warehousing tasks with intelligent RPA.",
+        {
+          title: "industries.manufacturing-logistics.details.solutions.3.title",
+          description: "industries.manufacturing-logistics.details.solutions.3.description",
           icon: FaWarehouse
         }
       ],
-      howWePerform: "GrozAI helps manufacturing and logistics companies integrate AI to improve operational efficiency, reduce costs, and enhance product quality. Our solutions are designed for scalability and seamless integration with existing industrial systems."
+      howWePerform: "industries.manufacturing-logistics.details.howWePerform"
     }
   }
 ];

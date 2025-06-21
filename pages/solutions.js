@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { FiArrowRight, FiCheckCircle, FiUsers, FiSettings, FiTrendingUp, FiShield } from 'react-icons/fi';
 
 const fadeInUp = {
@@ -145,4 +146,12 @@ export default function SolutionsPage() {
 
     </motion.div>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
 }

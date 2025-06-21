@@ -2,6 +2,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FiMail, FiPhone, FiMapPin, FiSend } from 'react-icons/fi';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -199,4 +200,12 @@ export default function ContactPage() {
 
     </motion.div>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common'])),
+    },
+  };
 }

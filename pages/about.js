@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FiArrowRight, FiAward, FiUsers, FiTrendingUp, FiCpu } from 'react-icons/fi';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -18,49 +20,49 @@ const stagger = {
   },
 };
 
-const leadership = [
-  {
-    name: 'Abdelrahman Ali',
-    title: 'Founder & Lead Applied Scientist',
-    bio: 'With a background in applied AI and Data Sceince and real-world retail experience, Abdelrahman founded Groz AI to turn machine learning into actionable business solutions. He leads the development of GenAI and analytics tools that help companies make smarter, faster decisions.',
-    image: '/images/leader-1.jpg', // Placeholder image
-  },
-  {
-    name: 'Mohamed Fahmy | Al mohasebon Al Arab',
-    title: 'Chief Executive Officer',
-    bio: 'With deep expertise in financial strategy and operational scaling, Mohamed Fahmy serves as CEO at Groz AI, ensuring sustainable growth and smart capital deployment. With a sharp eye on both performance and potential, he aligns financial planning with the company’s long-term vision for AI-driven transformation.',
-    image: '/images/leader-3.jpg', // Placeholder image
-  },
-  {
-    name: 'Ali El Shareef',
-    title: 'Chief Saudi Partner',
-    bio: 'With a strong track record in leading high-impact ventures across Saudi Arabia, Al Shareef joined Groz AI to bridge cutting-edge technology with real business opportunity. Backed by deep market insight and a wide network of strategic connections, he drives growth and partnerships that scale innovation across the region.',
-    image: '/images/leader-2.jpg', // Placeholder image
-  },
-  
-  
-];
-
-const values = [
-    { icon: <FiCpu size={28} />, title: 'Innovation at Core', description: 'We are driven by a relentless curiosity to explore new ideas and push the boundaries of what AI can achieve.' },
-    { icon: <FiUsers size={28} />, title: 'Customer Partnership', description: 'We succeed when our clients succeed. We build lasting relationships based on trust, transparency, and shared goals.' },
-    { icon: <FiAward size={28} />, title: 'Uncompromising Integrity', description: 'We are committed to the highest ethical standards in our work, from data privacy to algorithmic fairness.' },
-];
-
 export default function AboutPage() {
+  const { t } = useTranslation('common');
+
+  const leadership = [
+    {
+      name: t('about_leader1_name'),
+      title: t('about_leader1_title'),
+      bio: t('about_leader1_bio'),
+      image: '/images/leader-1.jpg',
+    },
+    {
+      name: t('about_leader2_name'),
+      title: t('about_leader2_title'),
+      bio: t('about_leader2_bio'),
+      image: '/images/leader-3.jpg',
+    },
+    {
+      name: t('about_leader3_name'),
+      title: t('about_leader3_title'),
+      bio: t('about_leader3_bio'),
+      image: '/images/leader-2.jpg',
+    },
+  ];
+
+  const values = [
+    { icon: <FiCpu size={28} />, title: t('about_value1_title'), description: t('about_value1_desc') },
+    { icon: <FiUsers size={28} />, title: t('about_value2_title'), description: t('about_value2_desc') },
+    { icon: <FiAward size={28} />, title: t('about_value3_title'), description: t('about_value3_desc') },
+  ];
+
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }} variants={stagger}>
       <Head>
-        <title>About GrozAI - Our Mission, Story, and Team</title>
-        <meta name="description" content="Learn about GrozAI's mission to democratize AI, our story of innovation, and the leadership team driving our success." />
+        <title>{t('about_page_title')}</title>
+        <meta name="description" content={t('about_page_description')} />
       </Head>
 
       {/* Hero Section */}
       <motion.section variants={fadeInUp} className="bg-primary text-white py-20 md:py-28 hero-pattern">
         <div className="container mx-auto px-4 sm:px-6 text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">The People Behind the Platforms</h1>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">{t('about_hero_title')}</h1>
           <p className="text-lg sm:text-xl text-accent-gray-200 max-w-3xl mx-auto">
-            We are a team of researchers, engineers, and strategists united by a single mission: to make artificial intelligence a powerful force for good in the enterprise.
+            {t('about_hero_subtitle')}
           </p>
         </div>
       </motion.section>
@@ -68,38 +70,33 @@ export default function AboutPage() {
       {/* Mission & Vision Section */}
       <motion.section variants={fadeInUp} className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="text-center md:text-left">
-              <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Our Mission</h2>
-              <p className="text-xl text-accent-gray-700">To empower organizations of all sizes to harness the transformative power of artificial intelligence, turning complex data into actionable intelligence and tangible business outcomes.</p>
-            </div>
-            <div className="text-center md:text-left border-t-2 md:border-t-0 md:border-l-2 border-primary pt-8 md:pt-0 md:pl-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Our Vision</h2>
-              <p className="text-xl text-accent-gray-700">To be the most trusted partner for applied AI, creating a future where intelligent technology seamlessly integrates with human expertise to solve humanity&apos;s biggest challenges.</p>
-            </div>
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">{t('about_mission_title')}</h2>
+            <p className="text-lg text-accent-gray-700 leading-relaxed">
+              {t('about_mission_text')}
+            </p>
           </div>
         </div>
       </motion.section>
 
-      {/* Our Story Section */}
+      {/* Story Section */}
       <motion.section variants={fadeInUp} className="py-16 md:py-24 bg-accent-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 max-w-4xl text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-6">Our Story</h2>
-            <p className="text-lg text-accent-gray-700 mb-4">
-                Founded in 2021 by a group of data scientists and enterprise software veterans, GrozAI was born from a shared observation: while the promise of AI was immense, its practical application was often out of reach for many businesses. We saw a gap between cutting-edge academic research and scalable, reliable, and user-friendly enterprise solutions.
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">{t('about_story_title')}</h2>
+            <p className="text-lg text-accent-gray-700 leading-relaxed">
+              {t('about_story_text')}
             </p>
-            <p className="text-lg text-accent-gray-700">
-                We aren&apos;t just a tool change that. Our journey began with a commitment to first principles—understanding our clients&apos; core challenges before writing a single line of code. This client-centric approach, combined with our deep technical expertise, allowed us to build the flexible, powerful platforms we offer today. We are proud to be a bootstrapped, independent company, driven solely by our passion for technology and our clients&apos; businesses.
-            </p>
+          </div>
         </div>
       </motion.section>
 
-      {/* Our Values Section */}
-       <motion.section variants={fadeInUp} className="py-16 md:py-24 bg-white">
+      {/* Values Section */}
+      <motion.section variants={fadeInUp} className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Our Core Values</h2>
-            <p className="text-lg text-accent-gray-700">The principles that guide our work, our partnerships, and our culture.</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">{t('about_values_title')}</h2>
+            <p className="text-lg text-accent-gray-700">{t('about_values_subtitle')}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {values.map((value) => (
@@ -126,8 +123,8 @@ export default function AboutPage() {
       <motion.section variants={fadeInUp} className="py-16 md:py-24 bg-accent-gray-50">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Meet Our Leadership</h2>
-            <p className="text-lg text-accent-gray-700">The experienced team guiding our mission and strategy.</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">{t('about_leadership_title')}</h2>
+            <p className="text-lg text-accent-gray-700">{t('about_leadership_subtitle')}</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
             {leadership.map((leader) => (
@@ -154,24 +151,24 @@ export default function AboutPage() {
       <motion.section variants={fadeInUp} className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-12 md:mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">Success Partners</h2>
-            <p className="text-lg text-accent-gray-700">Our trusted partners who contribute to GrozAI&apos;s success and vision.</p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-4">{t('about_partners_title')}</h2>
+            <p className="text-lg text-accent-gray-700">{t('about_partners_subtitle')}</p>
           </div>
           <div className="flex flex-col items-center">
             <motion.div variants={fadeInUp} className="text-center max-w-md">
               <div className="relative w-36 h-36 mx-auto mb-4">
                 <Image
                   src="/images/partner-adel-fawzy.jpg"
-                  alt="Adel Fawzy"
+                  alt={t('about_partner1_name')}
                   layout="fill"
                   objectFit="cover"
                   className="rounded-full"
                 />
               </div>
-              <h3 className="text-xl font-bold text-primary">Adel Fawzy</h3>
-              <p className="text-primary font-semibold mb-2">Financial Consultant</p>
+              <h3 className="text-xl font-bold text-primary">{t('about_partner1_name')}</h3>
+              <p className="text-primary font-semibold mb-2">{t('about_partner1_title')}</p>
               <p className="text-sm text-accent-gray-600 max-w-xs mx-auto">
-                Adel Fawzy brings decades of financial expertise to GrozAI, providing strategic consulting and guidance on fiscal planning, investment, and sustainable growth. His insights and experience ensure GrozAI’s financial operations are robust and future-ready.
+                {t('about_partner1_bio')}
               </p>
             </motion.div>
           </div>
@@ -181,13 +178,13 @@ export default function AboutPage() {
       {/* CTA Section */}
       <motion.section variants={fadeInUp} className="bg-primary text-white py-16 md:py-24 hero-pattern">
         <div className="container mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4">{t('about_cta_title')}</h2>
           <p className="text-lg text-accent-gray-200 max-w-2xl mx-auto mb-8">
-            Let&apos;s explore how GrozAI&apos;s platforms can unlock new opportunities for your organization. Contact our team for a personalized consultation and demo.
+            {t('about_cta_subtitle')}
           </p>
           <Link href="/contact" legacyBehavior>
             <a className="inline-block bg-white text-primary font-semibold px-8 py-4 rounded-lg text-lg hover:bg-accent-gray-100 transition-colors duration-300">
-              Get in Touch <FiArrowRight className="inline ml-2" />
+              {t('about_cta_button')} <FiArrowRight className="inline ml-2" />
             </a>
           </Link>
         </div>
@@ -195,4 +192,12 @@ export default function AboutPage() {
 
     </motion.div>
   );
+}
+
+export async function getStaticProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['common', 'footer'])),
+    },
+  };
 }
