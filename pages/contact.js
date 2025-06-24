@@ -131,7 +131,7 @@ export default function ContactPage() {
 
               <div className="mt-12 h-80 bg-accent-gray-200 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.331523919698!2d31.28479381511347!3d29.96994098190977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583815eba31959%3A0x4f4202a35238f0!2sVenice%20Tower%202%2C%20Zahraa%20Al%20Maadi%2C%20Al%20Basatin%2C%20Cairo%20Governorate%204211250%2C%20Egypt!5e0!3m2!1sen!2sus!4v1678886055535!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d624.7050885969336!2d31.311548632673706!3d29.96339987642314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1458397619ec6895%3A0x1763db598e7c73b2!2z2KjYsdisINmB2YrZhtmK2LPZitinINiy2YfYsdin2KEg2KfZhNmF2LnYp9iv2Yk!5e1!3m2!1sen!2seg!4v1750778612253!5m2!1sen!2seg"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { FiArrowRight } from 'react-icons/fi';
 import { useTranslation } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { posts } from '../../data/posts';
+
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -118,28 +118,54 @@ const BlogPage = ({ featuredPost, recentPosts }) => {
 };
 
 export async function getStaticProps({ locale }) {
-  // First, sort all posts by date
-  const sortedPosts = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
-  
-  // Find the 'Personalization at Scale' post
-  const featuredArticle = sortedPosts.find(post => 
-    post.title === 'Personalization at Scale: How AI is Redefining Customer Experience'
-  );
-  
-  // Get all other posts except the featured one
-  const otherPosts = sortedPosts.filter(post => 
-    post.title !== 'Personalization at Scale: How AI is Redefining Customer Experience'
-  );
-  
-  // If the featured article exists, use it; otherwise use the most recent post
-  const featuredPost = featuredArticle || sortedPosts[0] || null;
-  const recentPosts = featuredArticle ? otherPosts : sortedPosts.slice(1);
+  const translations = require(`../../public/locales/${locale}/common.json`);
+  const blogPostsT = translations.blog_posts;
+
+  const blogPostMetadata = {
+    'personalization-at-scale': { 
+      date: '2024-05-20', 
+      image: '/images/blog/personalization-at-scale.jpg', // This will fallback to placeholder
+      alt: 'An abstract image representing personalization and AI' 
+    },
+    'ai-driven-customer-experience': { 
+      date: '2024-04-15', 
+      image: '/images/blog/ai-customer-experience.jpg', 
+      alt: 'Customer journey mapping with AI elements' 
+    },
+    'predictive-analytics-forecasting-trends': { 
+      date: '2024-03-10', 
+      image: '/images/blog/predictive-analytics.jpg', 
+      alt: 'Graphs and charts showing future trends' 
+    },
+    'ethical-ai-in-enterprise': { 
+      date: '2024-02-05', 
+      image: '/images/blog/ethical-ai.jpg', 
+      alt: 'A balanced scale symbolizing ethics in AI' 
+    },
+    'the-rise-of-generative-ai': { 
+        date: '2024-01-15', 
+        image: '/images/blog/generative-ai.jpg', 
+        alt: 'AI generating art and code' 
+    }
+  };
+
+  const allPosts = Object.keys(blogPostsT).map(slug => ({
+    slug,
+    ...blogPostsT[slug],
+    ...(blogPostMetadata[slug] || {}),
+  }));
+
+  const sortedPosts = allPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  const featuredSlug = 'personalization-at-scale';
+  const featuredPost = sortedPosts.find(p => p.slug === featuredSlug) || sortedPosts[0] || null;
+  const recentPosts = sortedPosts.filter(p => p.slug !== featuredSlug);
 
   return {
     props: {
       ...(await serverSideTranslations(locale, ['common'])),
       featuredPost,
-      recentPosts,
+      recentPosts: recentPosts.slice(0, 3), // Show the 3 most recent non-featured posts
     },
   };
 }
