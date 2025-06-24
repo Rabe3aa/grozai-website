@@ -10,31 +10,31 @@ const fadeInUp = {
   animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
 };
 
-export default function SolutionPage({ solution }) {
+export default function SolutionPage({ industry }) {
   const { t } = useTranslation('common');
 
-  if (!solution) {
+  if (!industry) {
     return <div>{t('loading', 'Loading...')}</div>;
   }
 
-  const solutionTitle = t(`solutions.${solution.slug}.title`);
-  const solutionHeroSubtitle = t(`solutions.${solution.slug}.heroSubtitle`);
-  const solutionContent = t(`solutions.${solution.slug}.content`);
+  const pageTitle = t(`industries.${industry.slug}.title`);
+  const pageHeroSubtitle = t(`industries.${industry.slug}.heroSubtitle`);
+  const pageContent = t(`industries.${industry.slug}.content`);
 
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
       <Head>
-        <title>{`${solutionTitle} - ${t('grozai_solutions', 'GrozAI Solutions')}`}</title>
-        <meta name="description" content={solutionHeroSubtitle} />
+        <title>{`${pageTitle} - ${t('grozai_solutions', 'GrozAI Solutions')}`}</title>
+        <meta name="description" content={pageHeroSubtitle} />
       </Head>
 
       {/* Hero Section */}
       <motion.section variants={fadeInUp} className="bg-primary text-white py-20 md:py-28 hero-pattern">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">{solutionTitle}</h1>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">{pageTitle}</h1>
             <p className="text-lg sm:text-xl text-accent-gray-200">
-              {solutionHeroSubtitle}
+              {pageHeroSubtitle}
             </p>
           </div>
         </div>
@@ -44,7 +44,7 @@ export default function SolutionPage({ solution }) {
       <motion.section variants={fadeInUp} className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-3xl mx-auto">
-            <div className="prose prose-lg max-w-none text-accent-gray-700" dangerouslySetInnerHTML={{ __html: solutionContent }} />
+            <div className="prose prose-lg max-w-none text-accent-gray-700" dangerouslySetInnerHTML={{ __html: pageContent }} />
             
             <div className="mt-12 pt-8 border-t border-accent-gray-200">
               <Link href="/solutions" legacyBehavior>
@@ -64,7 +64,7 @@ export default function SolutionPage({ solution }) {
 
 export async function getStaticPaths({ locales }) {
   const enTranslations = require('../../public/locales/en/common.json');
-  const slugs = Object.keys(enTranslations.solutions);
+  const slugs = Object.keys(enTranslations.industries);
 
   const paths = [];
   for (const locale of locales) {
@@ -83,17 +83,17 @@ export async function getStaticProps({ params, locale }) {
   const { slug } = params;
   
   const enTranslations = require(`../../public/locales/en/common.json`);
-  const solutionData = enTranslations.solutions[slug] || {};
+  const industryData = enTranslations.industries[slug] || {};
 
-  const solution = {
+  const industry = {
     slug,
-    ...solutionData
+    ...industryData
   };
 
   return {
     props: { 
       ...(await serverSideTranslations(locale, ['common'])),
-      solution 
+      industry
     },
   };
 }

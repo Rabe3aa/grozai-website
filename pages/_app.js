@@ -13,7 +13,7 @@ function App({ Component, pageProps, router: appRouter }) {
     const { locale } = router;
     document.documentElement.lang = locale;
     document.documentElement.dir = locale === 'ar' ? 'rtl' : 'ltr';
-  }, [router.locale]);
+  }, [router]);
   return (
     <Layout>
       <AnimatePresence mode="wait" initial={false}>
