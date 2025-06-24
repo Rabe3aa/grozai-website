@@ -133,8 +133,8 @@ export default function AboutPage() {
                   <Image
                     src={leader.image}
                     alt={leader.name}
-                    layout="fill"
-                    objectFit="cover"
+                    fill
+                    style={{ objectFit: 'cover' }}
                     className="rounded-full"
                   />
                 </div>
@@ -160,8 +160,8 @@ export default function AboutPage() {
                 <Image
                   src="/images/partner-adel-fawzy.jpg"
                   alt={t('about_partner1_name')}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: 'cover' }}
                   className="rounded-full"
                 />
               </div>

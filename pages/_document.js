@@ -18,8 +18,7 @@ class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
           {/* Inter font is imported in globals.css */}
           <meta name="description" content="GrozAI - AI and Data Science for Enterprise" />
-          <link rel="icon" href="/favicon.ico" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <link rel="icon" href="/images/groz-ai-icon.jpg" />
         </Head>
         <body>
           <Main />

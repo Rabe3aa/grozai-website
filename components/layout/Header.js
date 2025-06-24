@@ -94,7 +94,7 @@ export default function Header() {
               alt="GrozAI Logo"
               width={150}
               height={40}
-              objectFit="contain"
+              style={{ objectFit: 'contain' }}
               className="transition-all duration-300"
             />
           </a>

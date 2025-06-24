@@ -1,5 +1,6 @@
 {
   "site_title": "GrozAI - AI and Data Science for Enterprise",
+  "homepage_meta_title": "GrozAI - AI and Data Science for Enterprise",
   "hero_title": "Intelligent Solutions, <1>Real-World Impact.</1>",
   "hero_subtitle": "GrozAI empowers enterprises with cutting-edge AI and Data Science to solve complex challenges and drive transformative growth.",
   "explore_solutions": "Explore Our Solutions",
@@ -23,8 +24,8 @@
   "stats_stat3_label": "Data Points Analyzed",
   "stats_stat4_label": "Support Availability",
   "powering_innovation_title": "Trusted by Industry Leaders",
-  "client_one_alt": "Client One Logo",
-  "client_two_alt": "Client Two Logo",
+"client_7_alt": "Client One Logo",
+  "client_8_alt": "Client Two Logo",
   "platforms_title": "Explore Our AI-Powered Platforms",
   "platforms_subtitle": "Leverage our suite of intelligent platforms designed to tackle your most pressing business needs and unlock new opportunities for growth.",
   "platform1_title": "InsightAI Platform",
@@ -37,135 +38,135 @@
   "final_cta_title": "Ready to Transform Your Business?",
   "final_cta_subtitle": "Let GrozAI be your partner in navigating the complexities of the digital age with intelligent, data-driven solutions.",
   "get_started_today": "Get Started Today",
+  "services_page_title": "Our AI Services - GrozAI Solutions",
+  "services_page_description": "Explore GrozAI's suite of AI services, including predictive analytics, natural language processing (NLP), and computer vision solutions.",
+  "services_hero_title": "AI-Powered Industry Solutions",
+  "services_hero_subtitle": "We deliver tailored AI services that address the unique challenges of your industry, driving innovation and competitive advantage.",
+  "services_cta_title": "Ready to Innovate?",
+  "services_cta_subtitle": "Let's discuss how our AI expertise can transform your business operations.",
+  "services_cta_button": "Contact Us",
+  "ai_technologies_title": "Cutting-Edge AI Technologies We Master",
+  "ai_technologies_subtitle": "At Groz AI, we harness the most advanced AI technologies to design solutions that are not only smart—but scalable, secure, and production-ready.",
+  "tech1_title": "Machine Learning & Predictive Analytics",
+  "tech1_desc": "Supervised, unsupervised, and time series models for forecasting, classification, clustering, and decision-making.",
+  "tech2_title": "Natural Language Processing (NLP)",
+  "tech2_desc": "Large Language Models (LLMs), sentiment analysis, document summarization, chatbots, named entity recognition, and information extraction.",
+  "tech3_title": "Computer Vision",
+  "tech3_desc": "Object detection, image classification, facial recognition, OCR (Optical Character Recognition), and real-time video analytics.",
+  "tech4_title": "Generative AI & LLMs",
+  "tech4_desc": "We fine-tune and deploy state-of-the-art models like GPT, LLaMA, DeepSeek, and Gemini for content generation, tutoring, and enterprise automation.",
+  "tech5_title": "Reinforcement Learning & Optimization",
+  "tech5_desc": "Customized decision agents for logistics, dynamic pricing, inventory control, and adaptive strategies in complex environments.",
+  "tech6_title": "Multi-Agent Systems",
+  "tech6_desc": "Agentic AI architectures that coordinate specialized agents for problem-solving, automation, and simulation-based decision workflows.",
+  "tech7_title": "Retrieval-Augmented Generation (RAG)",
+  "tech7_desc": "Hybrid systems combining LLMs with real-time knowledge retrieval from vector databases like FAISS, Weaviate, and Pinecone for high-accuracy responses.",
+  "tech8_title": "MLOps & AI Infrastructure",
+  "tech8_desc": "End-to-end pipelines for model training, deployment, and monitoring using Docker, FastAPI, Kubernetes, and cloud platforms (AWS, GCP, Azure).",
   "industries": {
     "retail-ecommerce": {
       "title": "Retail & E-Commerce",
       "shortDescription": "Personalized recommendations, demand forecasting, and AI-powered loyalty.",
-      "details": {
-        "overview": "AI is revolutionizing retail and e-commerce by enabling hyper-personalized shopping experiences, optimizing inventory, and predicting trends before they happen. We help businesses leverage data to create smarter, more efficient operations.",
-        "solutions": [
-          {
-            "title": "Personalized Recommendations",
-            "description": "Using customer behavior and purchase history to deliver product suggestions that convert."
-          },
-          {
-            "title": "Demand Forecasting",
-            "description": "AI-driven models to optimize stock levels, reduce waste, and ensure product availability."
-          },
-          {
-            "title": "Shelf Monitoring",
-            "description": "Computer vision for real-time inventory management and planogram compliance."
-          },
-          {
-            "title": "Churn Prediction",
-            "description": "Advanced models to identify at-risk customers and increase retention and loyalty."
-          }
-        ],
-        "howWePerform": "GrozAI delivers end-to-end AI solutions for retailers, from data integration and model development to seamless platform deployment. We partner with you to identify high-ROI use cases, implement robust AI pipelines, and train your teams for ongoing success."
+      "detailedOverview": "In the competitive landscape of retail and e-commerce, personalization is king. GrozAI empowers businesses to move beyond generic marketing and create 1-to-1 customer experiences at scale. Our solutions analyze customer behavior, predict future trends, and automate key decisions, transforming your data into your most valuable asset. From optimizing inventory with pinpoint accuracy to reducing customer churn with proactive engagement, we build AI systems that drive both revenue and loyalty.",
+      "keyFeatures": [
+        "Hyper-Personalized Recommendation Engines",
+        "AI-Powered Demand & Inventory Forecasting",
+        "Customer Churn Prediction & Prevention Models",
+        "Dynamic Pricing & Promotion Optimization"
+      ],
+      "caseStudy": {
+        "title": "Case Study: Boosting Conversion by 25% for an Online Fashion Retailer",
+        "text": "We partnered with a leading fashion e-commerce brand to replace their manual merchandising process with an AI-driven recommendation engine. By analyzing real-time user interactions and historical data, our system delivered personalized product carousels that increased user engagement by 40% and boosted overall conversion rates by 25% within the first quarter."
       }
     },
     "healthcare-diagnostics": {
       "title": "Healthcare & Diagnostics",
       "shortDescription": "Medical document digitization, OCR, and AI-driven diagnostics.",
-      "details": {
-        "overview": "AI in healthcare streamlines diagnostics, automates paperwork, and enhances patient care with deep learning and NLP. Our solutions are built to be secure, compliant, and impactful.",
-        "solutions": [
-          {
-            "title": "Medical Document OCR",
-            "description": "Digitize and extract critical information from medical documents using advanced OCR."
-          },
-          {
-            "title": "AI-Powered Diagnostics",
-            "description": "Enhance diagnostic imaging and reporting for faster, more accurate clinical results."
-          },
-          {
-            "title": "Insurance Fraud Detection",
-            "description": "Anomaly detection models to identify and flag fraudulent insurance claims."
-          },
-          {
-            "title": "Real-Time Patient Analysis",
-            "description": "Continuous patient data analysis for proactive care and early intervention."
-          }
-        ],
-        "howWePerform": "GrozAI works with healthcare providers to automate workflows, improve diagnostic accuracy, and ensure compliance with data privacy standards. We tailor AI solutions to your unique needs, integrating seamlessly with existing systems."
+      "detailedOverview": "In healthcare, precision and efficiency are paramount. GrozAI provides advanced AI solutions to digitize medical records, accelerate diagnostic processes, and uncover insights from complex health data, improving patient outcomes and operational workflows. Our systems are built to be secure, compliant, and seamlessly integrate with existing clinical environments, empowering medical professionals with faster and more accurate information.",
+      "keyFeatures": [
+        "Medical Document Digitization & OCR",
+        "AI-Assisted Medical Image Analysis",
+        "Predictive Health Analytics for Patient Risk Stratification",
+        "Natural Language Processing for Clinical Notes"
+      ],
+      "caseStudy": {
+        "title": "Case Study: Reducing Diagnostic Turnaround Time by 60%",
+        "text": "For a large network of diagnostic labs, we developed an AI model that assists pathologists in identifying anomalies in medical scans. The system flags areas of interest, reducing manual review time significantly and cutting the average diagnostic turnaround from 48 hours to just 18 hours, while improving accuracy."
       }
     },
     "education-edtech": {
       "title": "Education & EdTech",
       "shortDescription": "AI tutors, exam generation, and curriculum-aligned feedback.",
-      "details": {
-        "overview": "AI transforms education with personalized learning paths, automated administrative tasks, and interactive feedback systems that engage students like never before.",
-        "solutions": [
-          {
-            "title": "AI-Powered Tutors",
-            "description": "Personalized student support with AI tutors trained on specific curricula."
-          },
-          {
-            "title": "Automated Assessments",
-            "description": "Generate and grade exams automatically to save educators valuable time."
-          },
-          {
-            "title": "Interactive Learning Platforms",
-            "description": "Engage students with platforms that provide real-time, adaptive feedback."
-          },
-          {
-            "title": "Curriculum Analytics",
-            "description": "Actionable insights for teachers and administrators from curriculum-aligned data."
-          }
-        ],
-        "howWePerform": "GrozAI partners with schools and edtech companies to build adaptive learning platforms and assessment tools, leveraging AI to enhance outcomes for students and educators alike."
+      "detailedOverview": "AI is personalizing the learning journey for students everywhere. GrozAI develops intelligent tools for EdTech companies and educational institutions to create adaptive learning experiences, automate assessments, and provide data-driven insights into student performance. We aim to empower educators and make learning more engaging and effective for every student.",
+      "keyFeatures": [
+        "Adaptive Learning Platforms & Personalized Curricula",
+        "Automated Exam Generation & Secure Proctoring",
+        "Intelligent Tutoring Systems with Real-Time Feedback",
+        "Student Performance Analytics & At-Risk Identification"
+      ],
+      "caseStudy": {
+        "title": "Case Study: Improving Student Engagement by 35% with an AI Tutor",
+        "text": "We collaborated with an EdTech provider to build an AI-powered math tutor. The platform provides personalized exercises and instant feedback, adapting to each student's learning pace. Post-implementation, schools reported a 35% increase in student engagement and a 20% improvement in test scores."
       }
     },
     "finance-banking": {
       "title": "Finance & Banking",
       "shortDescription": "AI-driven fraud detection, algorithmic trading, and personalized financial advice.",
-      "details": {
-        "overview": "In finance, AI enhances security, automates trading, and provides personalized services, driving efficiency and mitigating risk across the board.",
-        "solutions": [
-          {
-            "title": "Real-Time Fraud Detection",
-            "description": "Protect assets with machine learning models that identify and prevent fraud in real-time."
-          },
-          {
-            "title": "Algorithmic Trading",
-            "description": "Utilize sophisticated models for market analysis and high-speed automated trade execution."
-          },
-          {
-            "title": "AI-Powered Credit Scoring",
-            "description": "Achieve more accurate risk assessment with dynamic, AI-driven credit scoring."
-          },
-          {
-            "title": "Robo-Advisory Services",
-            "description": "Deliver personalized, automated financial advice to a broad range of clients."
-          }
-        ],
-        "howWePerform": "GrozAI provides secure, compliant AI solutions for financial institutions, focusing on fraud prevention, trading optimization, and customer service automation to deliver a competitive edge."
+      "detailedOverview": "The financial sector relies on speed, accuracy, and security. GrozAI builds AI solutions that detect fraudulent activities in real-time, optimize trading strategies, and offer personalized financial services to customers, all while ensuring regulatory compliance. Our models provide a competitive edge by turning vast market data into actionable intelligence.",
+      "keyFeatures": [
+        "Real-Time Fraud Detection & Prevention",
+        "Algorithmic Trading & Portfolio Optimization",
+        "AI-Enhanced Credit Scoring & Risk Assessment",
+        "Automated KYC and AML Compliance Checks"
+      ],
+      "caseStudy": {
+        "title": "Case Study: Reducing False Positives in Fraud Alerts by 80%",
+        "text": "A major bank was struggling with high false-positive rates from their legacy fraud detection system. GrozAI developed a machine learning model that analyzed transaction patterns with greater nuance, reducing false positives by 80% and allowing their fraud team to focus on legitimate threats."
       }
     },
     "manufacturing-logistics": {
       "title": "Manufacturing & Logistics",
       "shortDescription": "Predictive maintenance, supply chain optimization, and quality control automation.",
-      "details": {
-        "overview": "AI optimizes the entire manufacturing and logistics pipeline, from predictive maintenance on the factory floor to route optimization in the supply chain.",
-        "solutions": [
-          {
-            "title": "Predictive Maintenance",
-            "description": "Reduce machinery downtime and lower maintenance costs with AI-powered predictions."
-          },
-          {
-            "title": "Automated Quality Control",
-            "description": "Leverage computer vision to detect product defects with superhuman accuracy."
-          },
-          {
-            "title": "Supply Chain Optimization",
-            "description": "Enhance inventory and logistics management for a more efficient supply chain."
-          },
-          {
-            "title": "Robotics Process Automation",
-            "description": "Automate repetitive manufacturing and warehousing tasks with intelligent RPA."
-          }
-        ],
-        "howWePerform": "GrozAI helps manufacturing and logistics companies integrate AI to improve operational efficiency, reduce costs, and enhance product quality. Our solutions are designed for scalability and seamless integration with existing industrial systems."
+      "detailedOverview": "Efficiency and foresight are key to a successful supply chain. GrozAI implements AI to predict maintenance needs, optimize logistics routes, automate quality control, and create more resilient and efficient manufacturing and supply chain operations. We help businesses minimize downtime, reduce operational costs, and improve visibility from the factory floor to the final delivery.",
+      "keyFeatures": [
+        "Predictive Maintenance for Industrial Machinery",
+        "Supply Chain & Logistics Route Optimization",
+        "Automated Quality Control with Computer Vision",
+        "Demand Forecasting & Inventory Management"
+      ],
+      "caseStudy": {
+        "title": "Case Study: Slashing Downtime with Predictive Maintenance",
+        "text": "For a heavy machinery manufacturer, we deployed an IoT and AI-based predictive maintenance solution. By analyzing sensor data, the system predicts equipment failures up to two weeks in advance, reducing unplanned downtime by 70% and saving millions in maintenance costs."
+      }
+    },
+    "call-center-quality-assurance": {
+      "title": "Call Center & Quality Assurance",
+      "shortDescription": "Automated call transcription, sentiment analysis, and agent performance tracking.",
+      "detailedOverview": "In customer service, quality and consistency are everything. GrozAI offers solutions to automatically transcribe and analyze 100% of customer calls. We use Natural Language Processing (NLP) to perform sentiment analysis, identify call drivers, and score agent performance against custom rubrics, providing actionable insights to improve customer satisfaction and operational efficiency.",
+      "keyFeatures": [
+        "AI-Powered Call Transcription & Summarization",
+        "Sentiment Analysis & Topic Modeling",
+        "Automated Agent Performance Scoring & Coaching",
+        "Real-Time Compliance Monitoring"
+      ],
+      "caseStudy": {
+        "title": "Case Study: Increasing CSAT by 15 Points through AI-Powered QA",
+        "text": "A telecommunications company automated their call center QA process with our platform. By analyzing all calls instead of a random 2%, they identified key areas for agent training and improved script adherence. This led to a 15-point increase in their overall Customer Satisfaction (CSAT) score in six months."
+      }
+    },
+    "software-engineering": {
+      "title": "Software Engineering & DevOps",
+      "shortDescription": "AI-assisted code generation, automated testing, and intelligent bug detection.",
+      "detailedOverview": "We empower software development teams to build better products, faster. GrozAI develops custom tools that integrate into the SDLC, from AI-assisted code completion and review to intelligent test case generation and automated bug detection. Our solutions help teams reduce manual effort, improve code quality, and accelerate their release cycles.",
+      "keyFeatures": [
+        "Intelligent Code Completion & Generation (GenAI)",
+        "Automated Test Case & Unit Test Creation",
+        "AI-Powered Bug Detection & Triage",
+        "DevOps Process Optimization & Anomaly Detection"
+      ],
+      "caseStudy": {
+        "title": "Case Study: Accelerating Development Cycles by 30%",
+        "text": "We built a custom GenAI tool for a SaaS company that integrated with their IDE. The tool learned from their existing codebase to suggest relevant, high-quality code snippets and automate the creation of unit tests. The development team reported a 30% reduction in time spent on routine coding and testing tasks."
       }
     }
   },
@@ -225,5 +226,164 @@
   "about_partner1_bio": "Adel Fawzy brings decades of financial expertise to GrozAI, providing strategic consulting and guidance on fiscal planning, investment, and sustainable growth. His insights and experience ensure GrozAI’s financial operations are robust and future-ready.",
   "about_cta_title": "Ready to Transform Your Business?",
   "about_cta_subtitle": "Let's explore how GrozAI's platforms can unlock new opportunities for your organization. Contact our team for a personalized consultation and demo.",
-  "about_cta_button": "Get in Touch"
+  "about_cta_button": "Get in Touch",
+
+  "solutions_page_meta_title": "Business Solutions",
+  "solutions_page_meta_description": "Discover how GrozAI's AI-powered solutions address key business challenges in customer experience, operational efficiency, growth, and risk management.",
+  "solutions_hero_title": "Transform Your Business with AI",
+  "solutions_hero_subtitle": "We don't just build AI models; we deliver comprehensive solutions that solve core business problems and create lasting value.",
+  "solutions_grid_title": "Solutions for Your Enterprise",
+  "solutions_grid_subtitle": "Explore how our integrated AI capabilities can be applied to drive meaningful outcomes across your organization.",
+  "solutions_page_challenges_title": "Common Challenges:",
+  "solutions_page_approach_title": "Our Approach:",
+  "solutions_page_outcomes_title": "Key Outcomes:",
+  "solutions_page_powered_by_title": "Powered by:",
+  "solutions_cta_title": "Have a Specific Challenge in Mind?",
+  "solutions_cta_subtitle": "Our experts are ready to discuss your unique requirements and design a custom AI strategy that aligns with your goals.",
+  "solutions_cta_button": "Talk to an Expert",
+
+  "qa_system_title": "AI-Powered Quality Assurance System",
+  "qa_system_subtitle": "Revolutionize your call center monitoring with our AI-driven platform that analyzes 100% of customer interactions to ensure quality, compliance, and customer satisfaction.",
+  "qa_system_feature1_title": "Comprehensive Call Analysis",
+  "qa_system_feature1_desc": "Automatically transcribe and analyze every call for sentiment, key topics, and agent performance metrics.",
+  "qa_system_feature2_title": "Actionable Insights Dashboard",
+  "qa_system_feature2_desc": "Visualize performance trends, identify coaching opportunities, and track KPIs with our intuitive reporting tools.",
+  "qa_system_feature3_title": "Automated Compliance & Scoring",
+  "qa_system_feature3_desc": "Ensure adherence to scripts and regulatory requirements with automated scoring and real-time alerts for violations.",
+  "qa_system_learn_more": "Learn More",
+
+
+
+  "blog_title": "GrozAI Insights",
+  "blog_description": "Explore the latest in AI, machine learning, and data strategy from the experts at GrozAI. Read our articles, tutorials, and industry analysis.",
+  "blog_subtitle": "Your expert source for the latest in artificial intelligence, data strategy, and the future of technology in the enterprise.",
+  "blog_featured_post": "Featured Article",
+  "blog_read_more": "Read More",
+  "blog_all_posts": "All Posts",
+  "blog_latest_articles": "Latest Articles",
+  "blog_explore_more": "Explore more insights from our team of experts.",
+
+  "blog_posts": {
+    "ai-driven-customer-experience": {
+      "title": "AI-Driven Customer Experience",
+      "summary": "Learn how AI is creating hyper-personalized customer journeys that boost satisfaction and loyalty.",
+      "content": "<p>Content for AI-Driven Customer Experience.</p>"
+    },
+    "predictive-analytics-forecasting-trends": {
+      "title": "Predictive Analytics: Forecasting Future Trends",
+      "summary": "Explore how predictive analytics can help your business anticipate market changes and make proactive decisions.",
+      "content": "<p>Content for Predictive Analytics: Forecasting Future Trends.</p>"
+    },
+    "ethical-ai-in-enterprise": {
+      "title": "The Importance of Ethical AI in the Enterprise",
+      "summary": "A look into the principles of ethical AI and why they are crucial for building trust and long-term success.",
+      "content": "<p>Content for The Importance of Ethical AI in the Enterprise.</p>"
+    },
+    "the-rise-of-generative-ai": {
+      "title": "The Rise of Generative AI",
+      "summary": "From art to code, generative AI is transforming creative and technical fields. What does this mean for the future?",
+      "content": "<p>Content for The Rise of Generative AI.</p>"
+    }
+  },
+
+  "solutions_page": {
+    "customer_experience": {
+      "title": "Enhance Customer Experience",
+      "description": "Deliver personalized, proactive, and seamless experiences that build loyalty and drive growth.",
+      "challenges": ["Understanding customer behavior", "Personalizing interactions at scale", "Providing 24/7 support"],
+      "ourSolution": "We leverage InsightAI to analyze customer data and AutomatePro to power intelligent chatbots and personalized communication workflows, creating a unified and delightful customer journey.",
+      "outcomes": ["Increased customer satisfaction & retention", "Higher engagement and conversion rates", "Reduced support costs"],
+      "relatedProducts": ["InsightAI", "AutomatePro"]
+    },
+    "operational_efficiency": {
+      "title": "Optimize Operational Efficiency",
+      "description": "Streamline complex processes, eliminate bottlenecks, and reduce operational costs with intelligent automation.",
+      "challenges": ["Manual, repetitive tasks", "Siloed data and systems", "Inefficient resource allocation"],
+      "ourSolution": "AutomatePro is deployed to handle routine tasks and orchestrate workflows across departments, while PredictiveEdge forecasts operational needs, ensuring resources are allocated effectively.",
+      "outcomes": ["Significant reduction in manual effort", "Accelerated process cycle times", "Improved data accuracy and compliance"],
+      "relatedProducts": ["AutomatePro", "PredictiveEdge"]
+    },
+    "business_growth": {
+      "title": "Accelerate Business Growth",
+      "description": "Identify new market opportunities, forecast demand, and make strategic decisions with confidence.",
+      "challenges": ["Identifying market trends", "Forecasting future demand accurately", "Making high-stakes strategic bets"],
+      "ourSolution": "Our PredictiveEdge engine analyzes market data to uncover growth opportunities, while InsightAI provides the deep competitive and customer intelligence needed to inform your strategy.",
+      "outcomes": ["Increased market share", "Improved ROI on new initiatives", "Data-driven strategic planning"],
+      "relatedProducts": ["PredictiveEdge", "InsightAI"]
+    },
+    "risk_mitigation": {
+      "title": "Mitigate Risk & Ensure Compliance",
+      "description": "Proactively identify potential risks, detect fraudulent activity, and navigate complex regulatory landscapes.",
+      "challenges": ["Evolving security threats", "Complex regulatory requirements", "Detecting sophisticated fraud"],
+      "ourSolution": "We utilize InsightAI for advanced anomaly detection and PredictiveEdge to model potential risk scenarios, creating a robust framework for compliance and security.",
+      "outcomes": ["Reduced exposure to financial and security risks", "Strengthened regulatory compliance", "Increased trust and reliability"],
+      "relatedProducts": ["InsightAI", "PredictiveEdge"]
+    }
+  },
+  "contact_meta_title": "Contact GrozAI - Let's Talk AI",
+  "contact_meta_description": "Get in touch with the GrozAI team. Reach out for sales inquiries, partnership opportunities, or to request a personalized demo.",
+  "contact_hero_title": "Get in Touch",
+  "contact_hero_subtitle": "Have a question, a project idea, or just want to learn more? We're here to help you navigate the future of AI.",
+  "contact_info_title": "Contact Information",
+  "contact_info_subtitle": "Fill out the form, or if you prefer, reach out to us directly through one of the channels below.",
+  "contact_office_title": "Our Office",
+  "contact_office_address": "Venice Tower, Zahraa El Maadi, Cairo, Egypt 4064145",
+  "contact_email_title": "Email Us",
+  "contact_email_address": "info@grozai.com",
+  "contact_phone_title": "Call Us",
+  "contact_phone_number": "+20 109 745 9765",
+  "contact_form_heading": "Send Us a Message",
+  "contact_form_subheading": "We'll get back to you as soon as possible.",
+  "contact_form_name": "Full Name",
+  "contact_form_email": "Work Email",
+  "contact_form_company": "Company Name",
+  "contact_form_title": "Job Title",
+  "contact_form_phone": "Phone Number",
+  "contact_form_inquiry_type": "Reason for Inquiry",
+  "contact_form_message": "Your Message",
+  "contact_inquiry_option_general": "General Question",
+  "contact_inquiry_option_sales": "Sales Inquiry",
+  "contact_inquiry_option_demo": "Request a Demo",
+  "contact_inquiry_option_partnership": "Partnership",
+  "contact_inquiry_option_press": "Press",
+  "contact_form_success_message": "Thank you for your message! We will get back to you shortly.",
+  "contact_form_error_message": "Failed to send message. Please try again later.",
+  "contact_button_sending": "Sending...",
+  "contact_button_send": "Send Message",
+
+  "products_meta_title": "Our AI-Powered Platforms - GrozAI",
+  "products_meta_description": "Explore GrozAI's suite of intelligent platforms: InsightAI for analytics, AutomatePro for workflow automation, and PredictiveEdge for forecasting.",
+  "products_hero_title": "Our Suite of AI Platforms",
+  "products_hero_subtitle": "Powerful, scalable, and built for the enterprise. Discover how our AI-powered products can transform your business from the ground up.",
+  
+  "product_insightai_name": "InsightAI Platform",
+  "product_insightai_description": "An advanced analytics platform that uncovers deep insights from your data, enabling smarter, faster decision-making across your enterprise.",
+  "product_insightai_feature1": "Advanced Data Visualization",
+  "product_insightai_feature2": "Real-time Analytics Dashboard",
+  "product_insightai_feature3": "Natural Language Processing (NLP) Queries",
+  "product_insightai_feature4": "Automated Anomaly Detection",
+  "product_insightai_feature5": "Custom Report Generation",
+  "product_insightai_benefits": "Empowers teams with actionable intelligence, revealing hidden patterns and opportunities in complex datasets to drive strategic growth.",
+
+  "product_automatepro_name": "AutomatePro Suite",
+  "product_automatepro_description": "Intelligently automate repetitive tasks and complex workflows, freeing up your team to focus on high-value, strategic initiatives.",
+  "product_automatepro_feature1": "Robotic Process Automation (RPA)",
+  "product_automatepro_feature2": "Intelligent Document Processing",
+  "product_automatepro_feature3": "AI-powered Workflow Orchestration",
+  "product_automatepro_feature4": "Integration with 100+ Enterprise Apps",
+  "product_automatepro_feature5": "Performance & ROI Analytics",
+  "product_automatepro_benefits": "Dramatically increases operational efficiency, reduces human error, and accelerates business processes for a significant competitive advantage.",
+
+  "product_predictiveedge_name": "PredictiveEdge Engine",
+  "product_predictiveedge_description": "Forecast future trends, customer behavior, and operational outcomes with our cutting-edge predictive modeling engine.",
+  "product_predictiveedge_feature1": "Time-Series Forecasting Models",
+  "product_predictiveedge_feature2": "Customer Churn Prediction",
+  "product_predictiveedge_feature3": "Demand & Inventory Forecasting",
+  "product_predictiveedge_feature4": "Predictive Maintenance Alerts",
+  "product_predictiveedge_feature5": "Scenario Modeling & Simulation",
+  "product_predictiveedge_benefits": "Enables proactive, data-driven decision-making by providing accurate forecasts that mitigate risk and capitalize on future opportunities.",
+
+  "products_features_title": "Key Features",
+  "products_cta_title": "Ready to See Our Products in Action?",
+  "products_cta_subtitle": "Schedule a personalized demo with one of our AI specialists and discover how GrozAI can address your unique challenges."
 }

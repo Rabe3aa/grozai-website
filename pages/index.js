@@ -1,11 +1,12 @@
 import Head from 'next/head';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { FiArrowLeft, FiArrowRight, FiPlayCircle, FiCpu, FiDatabase, FiZap, FiBriefcase, FiUsers, FiBarChart2, FiSmile, FiPackage, FiLayers, FiTrendingUp } from 'react-icons/fi';
 import Image from 'next/image';
 import CountUp from 'react-countup';
 import { useTranslation, Trans } from 'next-i18next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
 const fadeInUp = {
@@ -22,12 +23,18 @@ const stagger = {
 };
 
 export default function HomePage() {
-  const { t } = useTranslation('common');
+  const { t, i18n } = useTranslation('common');
   const { locale } = useRouter();
+  const [selectedIndustry, setSelectedIndustry] = useState(null);
+
+  const clientLogos = [
+    { src: '/images/clients/client-one.png', altKey: 'client_7_alt' },
+    { src: '/images/clients/client-two.png', altKey: 'client_8_alt' },
+  ];
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }} variants={stagger}>
       <Head>
-        <title>{t('site_title')}</title>
+        <title>{t('homepage_meta_title')}</title>
         
       </Head>
 
@@ -158,17 +165,34 @@ export default function HomePage() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {Object.entries(t('industries', { returnObjects: true })).map(([slug, industry]) => (
-              <Link
-                key={slug}
-                href={`/industries/${slug}`}
-                legacyBehavior
-              >
-                <a className="border-2 border-primary rounded-xl transition-all duration-300 group bg-white hover:bg-primary hover:text-white cursor-pointer shadow p-6 flex flex-col" style={{ textDecoration: 'none' }}>
-                  <h3 className="text-xl font-bold text-primary mb-4 transition-colors duration-300 group-hover:text-white">{industry.title}</h3>
-                  <p className="text-accent-gray-700 mb-4 flex-grow transition-colors duration-300 group-hover:text-white">{industry.shortDescription}</p>
-                  <span className="text-primary font-semibold mt-auto self-start group-hover:text-white transition-colors duration-300 flex items-center">
-                    {t('learn_more')} <FiArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-                  </span>
+              <Link key={slug} href={`/industries/${slug}`} legacyBehavior>
+                <a
+                  className="relative border-2 border-primary rounded-xl transition-all duration-300 group bg-white hover:bg-primary cursor-pointer shadow p-6 flex flex-col overflow-hidden h-full"
+                  style={{ textDecoration: 'none' }}
+                  onMouseEnter={() => setSelectedIndustry(slug)}
+                  onMouseLeave={() => setSelectedIndustry(null)}
+                >
+                  <div className="flex flex-col flex-grow z-10">
+                    <h3 className="text-xl font-bold text-primary mb-4 transition-colors duration-300 group-hover:text-white">{industry.title}</h3>
+                    <p className="text-accent-gray-700 mb-4 flex-grow transition-colors duration-300 group-hover:text-white">{industry.shortDescription}</p>
+                    <span className="text-primary font-semibold mt-auto self-start group-hover:text-white transition-colors duration-300 flex items-center">
+                      {t('learn_more')} <FiArrowRight className="ms-2 group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </div>
+
+                  <AnimatePresence>
+                    {selectedIndustry === slug && (
+                      <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="absolute inset-0 bg-blue-600 bg-opacity-90 flex items-center justify-center p-4 z-20"
+                      >
+                        <h4 className="text-white font-bold text-lg text-center">{industry.title}</h4>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </a>
               </Link>
             ))}
@@ -223,20 +247,17 @@ export default function HomePage() {
             ))}
           </motion.div>
 
-          {/* Client Logos Placeholder */}
+          {/* Client Logos */}
           <motion.div variants={fadeInUp}>
             <h2 className="text-3xl sm:text-4xl font-bold text-primary mb-12">{t('powering_innovation_title')}</h2>
             <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-6 md:gap-x-16">
-              {[
-                { src: '/images/clients/client-one.png', alt: t('client_one_alt') },
-                { src: '/images/clients/client-two.png', alt: t('client_two_alt') },
-              ].map((logo, i) => (
+              {clientLogos.map((logo, i) => (
                 <div key={i} className="relative h-28 w-64 filter grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
                   <Image 
                     src={logo.src} 
-                    alt={logo.alt} 
-                    layout="fill"
-                    objectFit="contain"
+                    alt={t(logo.altKey)} 
+                    fill
+                    style={{ objectFit: 'contain' }}
                   />
                 </div>
               ))}
@@ -324,7 +345,7 @@ export default function HomePage() {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['common', 'footer'])),
+      ...(await serverSideTranslations(locale, ['common'])),
     },
   };
 }

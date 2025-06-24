@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: 'Method not allowed' });
   }
 
-  const { name, email, company, inquiry, message } = req.body;
+  const { name, email, company, title, phone, inquiry, message } = req.body;
 
   // Basic validation
   if (!name || !email || !message) {
@@ -33,6 +33,8 @@ export default async function handler(req, res) {
         Name: ${name}
         Email: ${email}
         Company: ${company || 'Not provided'}
+        Title: ${title || 'Not provided'}
+        Phone: ${phone || 'Not provided'}
         Inquiry Type: ${inquiry}
         
         Message:
@@ -43,6 +45,8 @@ export default async function handler(req, res) {
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Company:</strong> ${company || 'Not provided'}</p>
+        <p><strong>Title:</strong> ${title || 'Not provided'}</p>
+        <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
         <p><strong>Inquiry Type:</strong> ${inquiry}</p>
         <h3>Message:</h3>
         <p>${message.replace(/\n/g, '<br>')}</p>

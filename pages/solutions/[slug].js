@@ -17,7 +17,7 @@ export default function SolutionPage({ solution }) {
   return (
     <motion.div initial="initial" animate="animate" exit={{ opacity: 0 }}>
       <Head>
-        <title>{solution.title} - GrozAI Solutions</title>
+        <title>{`${solution.title} - GrozAI Solutions`}</title>
         <meta name="description" content={solution.heroSubtitle} />
       </Head>
 

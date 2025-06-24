@@ -26,7 +26,7 @@ export default function Footer() {
                 alt="GrozAI Logo" 
                 width={150} 
                 height={40} 
-                objectFit="contain"
+                style={{ objectFit: 'contain' }}
               />
             </div>
             <p className="text-sm mb-4 max-w-sm">
