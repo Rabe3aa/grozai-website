@@ -124,7 +124,7 @@ export async function getStaticProps({ locale }) {
   const blogPostMetadata = {
     'personalization-at-scale': { 
       date: '2024-05-20', 
-      image: '/images/blog/personalization-at-scale.jpg', // This will fallback to placeholder
+      image: '/images/blog/ai-customer-experience.jpg', 
       alt: 'An abstract image representing personalization and AI' 
     },
     'ai-driven-customer-experience': { 
